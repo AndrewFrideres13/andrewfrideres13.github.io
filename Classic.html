@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Old School Games</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script
+    ><![endif]-->
+  </head>
+  <body>
+    <div class="cBG">
+      <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
+      <header id="top">
+        <h1>Classic Games</h1>
+      </header>
+      <main>
+        <section class="gameInfo">
+          <h3><img src="./Pics/C1.png" alt="Joystick" /></h3>
+          <p>
+            This is just a general list of all the classic games, and the role
+            they played in gaming history.
+          </p>
+          <div id="picText">Doom</div>
+          <h3><img src="./Pics/Doom2.png" alt="Doom Logo" /></h3>
+          <p>
+            Well, here it is. The game that is heralded as the start of the
+            First Person Shooter genre and was developed by Id Software. One of
+            the reasons too we still have video games around today. This game
+            goes at the top of the list because when you think classics, you
+            can't help but think DOOM first.
+          </p>
+          <div id="picText">Deus Ex</div>
+          <h3><img src="./Pics/Deus.png" alt="Deus Ex Logo" /></h3>
+          <p>
+            Personal favorite, Deus Ex is regarded as one of the greatest role
+            playings games of all time even despite its age today. The common
+            joke "Every time somebody mentions Deus Ex somebody else goes to
+            reinstall it" is soemthing that still goes on today. Developed by
+            Ion Storm, it includes a lot of themes and explores conspiracy
+            theories that are still discussed at length today. Good
+            choice/consequence game as well, player actions early on can really
+            come back to help or bite you later on!
+          </p>
+          <div id="picText">Half Life</div>
+          <h3><img src="./Pics/HL.png" alt="Half Life Logo" /></h3>
+          <p>
+            Developed by Valve Software, you play as a mute scientist with a
+            crowbar. What is there to not love? Another classic in the FPS
+            genre, it was also heralded for its puzzles that really challenged
+            the player to use their mind. And of course when one mentions Half
+            Life the question of when the 3rd installment is coming out usually
+            follows short behind. So, I'll be the first to ask, when is HL3
+            happening Valve?
+          </p>
+        </section>
+        <h2 class="returnToTop"><a href="#top">Return to top</a></h2>
+      </main>
+    </div>
+    <!-- Seperated out the awesome footer for readability -->
+    <script>
+      $(function () {
+        $("#HUD").load("HUD.html");
+      });
+    </script>
+    <div id="HUD"></div>
+  </body>
+</html>

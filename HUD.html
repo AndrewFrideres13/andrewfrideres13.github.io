@@ -1,0 +1,73 @@
+
+
+<footer>
+	<div class="hud-container">
+	   <div class="hud">
+		  <div class="ammo box">
+			 <div class="number">25</div>
+			 Ammo
+		  </div>
+		  <div class="health box">
+			 <div class="number">100%</div>
+			 Health
+		  </div>
+		  <div class="arms box">
+			 <div class="numberpad">
+				<audio id="navSound" src="./audio/nav.wav"></audio>
+				<ul onmouseover="var navSound = document.getElementById('navSound');
+				   navSound.play(); navSound.volume = 0.7">
+				<div class="tooltip"><a href="index.html"><button>2</button></a><span class="tooltiptext">Home</span></div><!--
+				--><div class="tooltip"><a href="gamesPortal.html"><button>3</button></a><span class="tooltiptext games">Games</span></div><!--
+				--><button>4</button><br /><!--
+				--><button>5</button><button>6</button><button>7</button>
+			 </div>
+			 Arms
+		  </div>
+	 	  <a class="avatar box tooltip" href="about.html">
+			<span class="abtTooltiptext">Me</span>
+			<div class="avatarTxt">Click Me</div> 
+		  </a>
+		  <div class="armor box">
+			 <div class="number">200%</div>
+			 Armor
+		  </div>
+		  <div class="lives box">
+			 <div id="outsideLinks"><a href="https://www.linkedin.com/in/andrew-frideres-231057107"><img src="./Pics/ln.png" alt="AndrewFrideres@Linked In"
+				height="28px" width="28px" /></a></div>
+			 <br />
+			 <div id="outsideLinks"><a href="https://github.com/AndrewFrideres13"><img src="./Pics/git.png" alt="AndrewFrideres13@Github"
+				height="28px" width="28px" /></a><br /></div>
+			 <div id="outsideLinks"><a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><img src="./Pics/mail.png" alt="Email Me (Afrideres)"
+				height="28px" width="28px" /></a></div>
+		  </div>
+		  <div class="info box">
+			 <a>Bull 200/200</a>
+			 <a>Shel &nbsp;25/&nbsp;50</a>
+			 <a>Rckt &nbsp;50/&nbsp;50</a>
+			 <a>Cell 300/300</a>
+		  </div>
+		  <!-- Nav Links -->
+	   </div>
+	   <!-- Our True Hud without the extra bits on the side -->
+	</div>
+	<!-- End of our container for the DOOM Hud -->
+	<script>
+
+		//Need to change this to on window changed, so it fires more often, fix width?
+		function scaleAvatar () {
+			var avatar =  document.getElementsByClassName("avatar")[0];
+			var posInfo = avatar.getBoundingClientRect();
+			var storedX = posInfo.width-30;
+			if (storedX > 200) {
+				storedX = 200;
+			}
+			var storedY = posInfo.height-30;
+			
+			avatar.style.backgroundSize = storedX + "px" + " " + storedY + "px";
+		}
+		scaleAvatar();
+		window.addEventListener('resize', scaleAvatar);
+	</script>
+ </footer>
+ 
+ 

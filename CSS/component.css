@@ -1,0 +1,148 @@
+.quoteRotator {
+	position: relative;    /* positioning parent */
+	margin: 0.7rem auto 6.8rem auto;  /* center with varying top and bottom margins */
+	max-width: 800px;
+	width: 100%;
+	min-height: 400px;
+}
+
+.quoteRotator .quoteContent {
+	position: absolute;
+	min-height: 200px;
+	max-height: 650px;
+	border-top: 1px solid #bd0102;
+	padding: 0.3em 0;
+	top: 0;
+	z-index: 0;
+	opacity: 0;   /* hide this content via transparency for now... */
+	width: 100%;
+}
+
+#me {
+  clear:none;
+  float:right;
+  width:27%;
+}
+
+.quoteRotator .quoteContent.quoteCurrent,
+.no-js .quoteRotator .quoteContent {
+	position: relative; 
+	z-index: 100;
+	pointer-events: auto;
+	opacity: 1;   /* show the current quote */
+}
+
+.quoteRotator .quoteContent:before,
+.quoteRotator .quoteContent:after {
+	content: " ";
+	display: table;
+}
+
+.quoteRotator .quoteContent:after {
+	clear: both;
+}
+
+/* This is the progress bar we will see being animated from left-to-right
+   via jQuery code Width is our starting value for the red bar modified by jquery
+.quoteProgress {
+	position: absolute;
+	background: #FFA500;
+	height: 2px;
+	width: 0%;   
+	left:0;
+	top: 0;
+	z-index: 1000;
+}*/
+
+.quoteRotator blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+.quoteRotator blockquote p {
+	float: left;
+	font-size: 1em;
+	margin: 0.2em 0 1em;
+}
+
+.quoteRotator blockquote footer {
+	font-size: 1.3em;
+}
+
+.quoteRotator .quoteContent img {
+	clear: both;
+	width: 35rem;
+}
+
+.prevBttn, .nextBttn {
+  color:#FFFF9A;
+  cursor:pointer; /* Ensures these buttons show they're clickable */
+}
+#pongGamePlay, #RandoGame, #battleShipGame {
+  width:50%;
+  float:none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#spaceShooter, #spotlight, #lackluster {
+	width:40%;
+}
+
+@media only screen and (min-width: 0em) and (max-width:60em) and (orientation:landscape){ /*Phone Landscape size*/
+	.quoteRotator {
+		width: 90%;
+		margin: 0.7rem auto 3.8rem auto;  /* center with varying top and bottom margins */
+		min-height: 200px;
+	}
+	
+	.quoteRotator .quoteContent p {
+		float:left;
+		width:70%;
+	}
+	#noImageText p { /* This will reset the slides with no images and make them look nice*/
+		float:none;
+		width:100%;
+	}
+	.quoteRotator .quoteContent footer {
+		clear:both;
+		float:right;
+		width:100%;
+	}
+	#pongGamePlay, #spaceShooter, #RandoGame, #battleShipGame, #me, #spotlight, #lackluster { /* These ID's are essentially the images...*/
+		width: 130px;
+		height:110px;
+		float:right;
+	}	
+	#me, #spotlight, #lackluster {
+		height:130px;
+		float:right;
+	}
+	#meText p {
+		width:33%;
+	}
+  .quoteRotator .quoteContent p {
+    width:auto;
+  }
+  
+  .quoteRotator .quoteContent img {
+    width:35rem;
+  }
+}
+@media only screen and (min-width: 0em) and (max-width:60em) and (orientation:portrait) { /* Phone Portrait*/
+	.quoteRotator {
+		font-size: 60%;
+		width:85%;
+	}
+	.quoteRotator img {
+		width: 60px;
+		height:130px;
+	}
+  .quoteRotator .quoteContent p {
+    float:none;
+  }
+  
+  .quoteRotator .quoteContent img {
+    width:auto;
+  }
+}
