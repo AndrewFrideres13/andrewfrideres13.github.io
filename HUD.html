@@ -1,7 +1,5 @@
 
-
 <footer>
-	<div class="hud-container">
 	   <div class="hud">
 		  <div class="ammo box">
 			 <div class="number">25</div>
@@ -40,14 +38,13 @@
 			 <div id="outsideLinks"><a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><img src="./Pics/mail.png" alt="Email Me (Afrideres)"
 				height="28px" width="28px" /></a></div>
 		  </div>
-		  <div class="info box">
-			 <a>Bull 200/200</a>
-			 <a>Shel &nbsp;25/&nbsp;50</a>
-			 <a>Rckt &nbsp;50/&nbsp;50</a>
-			 <a>Cell 300/300</a>
-		  </div>
+		  <div class="info box"><!--
+			 --><a>Bull 200/200</a><!--
+			 --><a>Shel &nbsp;25/&nbsp;50</a><!--
+			 --><a>Rckt &nbsp;50/&nbsp;50</a><!--
+			 --><a>Cell 300/300</a><!--
+		  --></div>
 		  <!-- Nav Links -->
-	   </div>
 	   <!-- Our True Hud without the extra bits on the side -->
 	</div>
 	<!-- End of our container for the DOOM Hud -->
@@ -57,7 +54,13 @@
 		function scaleAvatar () {
 			var avatar =  document.getElementsByClassName("avatar")[0];
 			var posInfo = avatar.getBoundingClientRect();
-			var storedX = posInfo.width-30;
+      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+      if (width < 960) {
+        var storedX = posInfo.width-60;
+      } else {
+        var storedX = posInfo.width-30;
+      }
 			if (storedX > 200) {
 				storedX = 200;
 			}
