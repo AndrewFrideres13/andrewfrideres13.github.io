@@ -265,8 +265,10 @@
         $("#HUD").load("HUD.html");
       });
       function refresh() {
-        document.cookie = "skippable=true";
-        location.reload();
+        if ($(window).width() != width) {
+          document.cookie = "skippable=true";
+          location.reload();
+        }
       }
       window.addEventListener("resize", refresh);
     </script>
