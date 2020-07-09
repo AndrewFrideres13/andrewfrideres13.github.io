@@ -177,12 +177,11 @@ body {
   #outsideLinks:hover {
     border-color: #262626 #727274 #727274 #262626;
   }
-  .info a:hover,
-  .link {
+  .info a:hover {
     transition: color 0.3s;
     color: #ffff9a;
   }
-  .link:hover,
+  .clickable:hover,
   button:hover {
     transition: color 0.3s;
     color: #bd0102;
@@ -277,7 +276,9 @@ button {
   transition: color 0.8s;
   color: #a1a1a1;
 }
-
+.clickable {
+  color: #ffff9a;
+}
 /* End NAV styling */
 
 /* Index stylings */
@@ -297,7 +298,7 @@ button {
 }
 
 /* End Specific styles for Class, and Gems pages */
-@media only screen and (min-width: 0em) and (max-width: 50em) and (orientation: portrait) {
+@media only screen and (min-width: 0em) and (max-width: 40em) and (orientation: portrait) {
   .abtBG {
     padding-bottom: 15.5rem;
   }
@@ -366,7 +367,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 0em) and (max-width: 60em) and (orientation: landscape) {
+@media only screen and (min-width: 0em) and (max-width: 55em) and (orientation: landscape) {
   /* Styles for phone landscape..pretty much just need to shrink stuff down adjust percents where necessary */
   .abtBG {
     padding-bottom: 15.5rem;
@@ -412,7 +413,7 @@ button {
 }
 
 /* General Tablet adjustments */
-@media only screen and (min-width: 60) and (max-width: 100em) and (orientation: landscape) {
+@media only screen and (min-width: 60em) and (max-width: 100em) and (orientation: landscape) {
   .abtBG {
     padding-bottom: 4.5rem;
   }

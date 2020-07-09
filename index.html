@@ -16,18 +16,23 @@
       //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
       $(function () {
         var html = document.getElementsByTagName("html")[0];
+        var $startingBG = $(".startUpBG");
+        var $abtBG = $(".abtBG");
         //Waits a bit then triggers fade out
-        $(".startUpBG")
-          .delay(7500)
-          .fadeTo(5000, 0, function () {
-            $(".startUpBG").hide();
+        if (document.cookie == false) {
+          $startingBG.delay(7500).fadeTo(5000, 0, function () {
+            $startingBG.hide();
             html.style.overflow = "visible";
           });
-        $(".abtBG")
-          .delay(7500)
-          .fadeTo(5000, 1, function () {
-            $(".abtBG").show();
+
+          $abtBG.delay(7500).fadeTo(5000, 1, function () {
+            $abtBG.show();
           });
+        } else {
+          $startingBG.hide();
+          html.style.overflow = "visible";
+          $abtBG.show();
+        }
 
         //Controls our project show list
         $("#quoteRotator").abtRotator();
@@ -76,7 +81,7 @@
               who I am. In my spare time I like to play a lot of old school
               games such as DOOM, pick up a new programming language, or start a
               new project and just plug away at that. Link to my resume
-              <a class="link" href="./docs/Afrideres_Resume.docx" download
+              <a class="clickable" href="./docs/Afrideres_Resume.docx" download
                 >here</a
               >
               that includes the languages and projects I've worked on, otherwise
@@ -199,7 +204,7 @@
             <footer>
               Lack Luster Download:
               <a
-                class="link"
+                class="clickable"
                 href="https://games.mscs.uwstout.edu/GDD325S19-2/LackLuster/public/readme.html"
               >
                 Lack Luster
@@ -227,7 +232,7 @@
             />
             <footer>
               Fiskur Download:
-              <a class="link" href="https://castirongames2020.gitlab.io/"
+              <a class="clickable" href="https://castirongames2020.gitlab.io/"
                 >https://castirongames2020.gitlab.io</a
               >
             </footer>
@@ -251,6 +256,11 @@
       $(function () {
         $("#HUD").load("HUD.html");
       });
+      function refresh() {
+        document.cookie = "skippable=true";
+        location.reload();
+      }
+      window.addEventListener("resize", refresh);
     </script>
     <div id="HUD"></div>
   </body>
