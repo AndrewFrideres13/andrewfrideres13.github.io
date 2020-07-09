@@ -106,11 +106,15 @@
     $(function () {
       var $hud = $("#HUD");
 
+      //Waits a bit then triggers fade out
       if (document.cookie == false) {
+        //Starting load visible, everything else invisible
+        $hud.css("opacity", 0);
         $hud.delay(7500).fadeTo(5000, 1, function () {
           $hud.show();
         });
       } else {
+        $hud.css("opacity", 1);
         $hud.show();
       }
     });

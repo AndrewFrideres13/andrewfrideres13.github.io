@@ -21,7 +21,10 @@
 
         //Waits a bit then triggers fade out
         if (document.cookie == false) {
-          $startingBG.delay(7500).fadeTo(5000, 0, function () {
+          //Starting load visible, everything else invisible
+          $startingBG.css("opacity", 0.7);
+          $abtBG.css("opacity", 0);
+          $startingBG.delay(8000).fadeTo(5000, 0, function () {
             $startingBG.hide();
             html.style.overflow = "visible";
           });
@@ -30,6 +33,10 @@
             $abtBG.show();
           });
         } else {
+          //Starting load invisible, everything else visible
+          $startingBG.css("opacity", 0);
+          $abtBG.css("opacity", 1);
+
           $startingBG.hide();
           html.style.overflow = "visible";
           $abtBG.show();
