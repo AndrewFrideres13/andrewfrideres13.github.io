@@ -12,11 +12,7 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script
-      src="js/jquery_abtMe.js"
-      type="text/javascript"
-      charset="utf-8"
-    ></script>
+    <script src="js/jquery_abtMe.js"></script>
     <script>
       $(function () {
         //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
@@ -33,11 +29,9 @@
       <header>
         <h1>About Me</h1>
       </header>
-      <main>
-        <section class="aboutText">
-          <div id="quoteRotator" class="quoteRotator">
+          <main id="quoteRotator" class="quoteRotator">
             <div class="quoteContent">
-              <blockquote id="noImageText">
+              <blockquote>
                 <p>
                   I love playing with all kinds of technology, from the new, to
                   the old. I also have experience with Agile programming
@@ -48,32 +42,19 @@
                   new programming language, or start a new project and just plug
                   away at that. Link to my resume
                   <a
-                    id="link"
+                    class="link"
                     href="./docs/Afrideres_Resume.docx"
                     download
                     >here</a>
                   that includes the languages and projects I've worked on,
                   otherwise I can also be contacted at my email address below.
                 </p>
+                <img class="projectImg" src="./Pics/me.jpg" alt="Picture of me (Andrew)" />
                 <footer>- Andrew Frideres</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
-              <blockquote id="meText">
-                <p>
-                  My top programming languages:&#10;HTML & Javascript &#10;
-                  Java, PHP&#10;
-                </p>
-                <p>
-                  Other languages:&#10;Ruby, Python&#10;Visual Basic&#10;C, C++,
-                  C#&#10;
-                </p>
-                <p>Databasing skills:&#10;MySQL, SQLite &#10; PHP PDO</p>
-                <img id="me" src="./Pics/me.jpg" alt="Picture of me (Andrew)" />
-              </blockquote>
-            </div>
-            <div class="quoteContent">
-              <blockquote id="noImageText">
+              <blockquote>
                 <p>
                   A game i started my first semester of college to show off my
                   love of DOOM in a platformer format, and for me to learn a lot
@@ -90,12 +71,7 @@
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="pongGamePlay"
-                  src="./Pics/Pong.gif"
-                  alt="Gameplay Of Custom Pong Game"
-                />
-                <p>
+              <p>
                   My role in the group was to combine, test, and ensure we had a
                   deliverable to show off every week. I also had to be able to
                   sit town with team members and have them talk about their
@@ -104,16 +80,17 @@
                   Capstone project at CVTC and my test for everything I had
                   learned.
                 </p>
+                <img
+                  class="projectImg"
+                  src="./Pics/Pong.gif"
+                  alt="Gameplay Of Custom Pong Game"
+                />
                 <footer>Multiplayer Pong</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="battleShipGame"
-                  src="./Pics/bttleSh.PNG"
-                  alt="Custom battleship Game"
-                />
+                
                 <p>
                   My role in this group was to assist with the front end GUI
                   design and CSS styles using bootstrap. In addition I did a
@@ -123,16 +100,17 @@
                   for the first time, I had to work together with a group in
                   order to deliver a product.
                 </p>
+                <img
+                  class="projectImg"
+                  src="./Pics/bttleSh.PNG"
+                  alt="Custom battleship Game"
+                />
                 <footer>BattleShip Online</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="RandoGame"
-                  src="./Pics/gg.gif"
-                  alt="Gif of Game Selector"
-                />
+                
                 <p>
                   A program i made using Visual Studio (2015 initially, updated
                   to 2017), it uses a GUI to allow the user to add, remove, and
@@ -140,16 +118,17 @@
                   execution does a sort of "spin" to run through all the games
                   and select one, complete with fun sound effects!
                 </p>
+                <img
+                  class="projectImg"
+                  src="./Pics/gg.gif"
+                  alt="Gif of Game Selector"
+                />
                 <footer>Game Selector</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="spaceShooter"
-                  src="./Pics/spShoot.gif"
-                  alt="Gif of Space Shooter"
-                />
+                
                 <p>
                   A game I did using Swift 2.0, it's more or less a clone of the
                   classic Asteroids game from way back in the day. It is
@@ -157,68 +136,74 @@
                   phone, and has states for playing, power ups, and game over
                   conditions.
                 </p>
+                <img
+                  class="projectImg"
+                  src="./Pics/spShoot.gif"
+                  alt="Gif of Space Shooter"
+                />
                 <footer>Space Shooter</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="spotlight"
+                <p>
+                  My first time using Unity,this is a 2D sidescroller game built 
+                  for touchscreen Android devices, made with Haley Peterson (artist) at UW Stout
+                  for my GDD 200 class 2019. In this game you play as a little ghost boy in their quest 
+                  to restore color to the bleak world, with a unique mechanic of using an Android 
+                  devices built in gyroscope to control where the flashlight you use aims, using it
+                  to cut through the dark and expose the world of color below to solve puzzles & progress.
+                </p>
+                 <img
+                  class="projectImg"
                   src="./Pics/sp.png"
                   alt="Spotlight Poster"
                 />
-                <p>
-                  My first time using Unity, a game made with Haley Peterson at
-                  Stout for my GDD 200 class. In this game you play as a little
-                  ghost boy in their quest to restore color to the bleak world.
-                </p>
                 <footer>Spotlight</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="lackluster"
+                <p>
+                  Made at Stout in my GDD 325 class 2019, with Collin Diekvoss (Programmer), Lex Klusman (Artist), and Joshua Haakana (Artist) in 
+                  Lackluster your goal is to activate all the orbs in order to restore the light to the
+                  world. The game was made using Phaser 3.0, and made use of an npm server on the back end, 
+                  the ultimate goal was to make a fun, easy to play game for the Madison Children's Museum
+                  to put on as an interactive exhibit.
+                </p>
+                  <img
+                  class="projectImg"
                   src="./Pics/LL.png"
                   alt="Lackluster Poster"
                 />
-                <p>
-                  Made at Stout in my GDD 325 class, in Lackluster your goal is
-                  to activate all the orbs in order to restore the light to the
-                  world. The game was made using Phaser 3.0, and made use of an
-                  npm server on the back end
-                </p>
                 <footer>Lackluster</footer>
               </blockquote>
             </div>
             <div class="quoteContent">
               <blockquote>
-                <img
-                  id="fiskur"
-                  src="./Pics/fiskur.png"
-                  alt="Spring 2020 Fiskur Poster"
-                />
                 <p>
-                  Part of my 450 GDD Capstone, a 3D action adventure game made in Unity,
+                  Part of my 450 GDD Capstone Fall 2019-Spring 2020, a 3D action adventure game made in Unity,
                   You play as a shipwrecked Viking who has crashed on an island within the arctic. 
                   Fitted with only your fishing rod, you set out to catch fish in order to survive the ordeal. 
                   After wandering the island for a time, you discover an altar deep within the island dedicated to Njord, God of the Sea. 
                   Offering some of your bounty to Njord, he aids you by turning your rod into a weapon capable of surviving the terrors of the night to come...
-                  <br/><br/>Link to Website & Download: <a id="link" href="https://castirongames2020.gitlab.io/">https://castirongames2020.gitlab.io</a>
                 </p>
-                <footer>FISKUR</footer>
+                <img
+                  class="projectImg"
+                  src="./Pics/fiskur.png"
+                  alt="Spring 2020 Fiskur Poster"
+                />
+                <footer>Link to Download: <a class="link" href="https://castirongames2020.gitlab.io/">https://castirongames2020.gitlab.io</a><br/><br/>FISKUR</footer>
               </blockquote>
             </div>
-          </div>
-          <!-- End div for rotator -->
-        </section>
-      </main>
+      </main><!-- End rotator -->
     </div>
     <!-- Seperated out the awesome footer for readability -->
     <script>
       $(function () {
         $("#HUD").load("HUD.html");
       });
+
     </script>
     <div id="HUD"></div>
   </body>

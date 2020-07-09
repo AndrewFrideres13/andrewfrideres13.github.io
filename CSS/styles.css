@@ -230,8 +230,10 @@ button {
   display: inline-block;
 }
 
-#outsideLinks:hover, .aboutText button:hover {
-  border-color: #262626 #727274 #727274 #262626;
+@media(hover: hover) and (pointer: fine) {
+  #outsideLinks:hover {
+    border-color: #262626 #727274 #727274 #262626;
+  }
 }
 
 #outsideLinks {
@@ -255,12 +257,12 @@ button {
 }
 
 .info a:hover,
-#link {
+.link {
   transition: color 0.3s;
   color: #ffff9a;
 }
 
-#link:hover, button:hover {
+.link:hover, button:hover {
   transition: color 0.3s;
   color: #bd0102;
   text-shadow: -2px -2px 0 #3d0002, 2px -2px 0 #3d0002, -2px 2px 0 #3d0002,
@@ -270,11 +272,6 @@ button {
 
 .info a:not(:hover) {
   transition: color 0.8s;
-  color: #a1a1a1;
-}
-
-a:visited,
-a:link {
   color: #a1a1a1;
 }
 

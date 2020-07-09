@@ -1,7 +1,7 @@
 .quoteRotator {
 	position: relative;    /* positioning parent */
 	margin: 0.7rem auto 6.8rem auto;  /* center with varying top and bottom margins */
-	max-width: 800px;
+	max-width: 1050px;
 	width: 100%;
 	min-height: 400px;
 }
@@ -18,12 +18,6 @@
 	width: 100%;
 }
 
-#me {
-  clear:none;
-  float:right;
-  width:27%;
-}
-
 .quoteRotator .quoteContent.quoteCurrent,
 .no-js .quoteRotator .quoteContent {
 	position: relative; 
@@ -36,10 +30,7 @@
 .quoteRotator .quoteContent:after {
 	content: " ";
 	display: table;
-}
-
-.quoteRotator .quoteContent:after {
-	clear: both;
+  clear: both;
 }
 
 /* This is the progress bar we will see being animated from left-to-right
@@ -57,36 +48,37 @@
 .quoteRotator blockquote {
 	margin: 0;
 	padding: 0;
+  width:100%;
 }
 
 .quoteRotator blockquote p {
 	float: left;
 	font-size: 1em;
 	margin: 0.2em 0 1em;
+  width:60%;
+  line-height: 1.35rem;
 }
 
 .quoteRotator blockquote footer {
 	font-size: 1.3em;
-}
-
-.quoteRotator .quoteContent img {
-	clear: both;
-	width: 35rem;
+  clear:both;
+  padding:1rem 0 0 0;
 }
 
 .prevBttn, .nextBttn {
   color:#FFFF9A;
   cursor:pointer; /* Ensures these buttons show they're clickable */
 }
-#pongGamePlay, #RandoGame, #battleShipGame {
-  width:50%;
-  float:none;
-  margin-left: auto;
-  margin-right: auto;
+
+.projectImg {
+  float:left;
+  width:36.5%;
 }
 
-#spaceShooter, #spotlight, #lackluster {
-	width:40%;
+@media(hover: hover) and (pointer: fine) {
+  .prevBttn:hover, .nextBttn:hover  {
+    border-color: #262626 #727274 #727274 #262626;
+  }
 }
 
 @media only screen and (min-width: 0em) and (max-width:60em) and (orientation:landscape){ /*Phone Landscape size*/
@@ -95,54 +87,26 @@
 		margin: 0.7rem auto 3.8rem auto;  /* center with varying top and bottom margins */
 		min-height: 200px;
 	}
-	
-	.quoteRotator .quoteContent p {
-		float:left;
-		width:70%;
-	}
-	#noImageText p { /* This will reset the slides with no images and make them look nice*/
-		float:none;
-		width:100%;
-	}
 	.quoteRotator .quoteContent footer {
 		clear:both;
-		float:right;
 		width:100%;
 	}
-	#pongGamePlay, #spaceShooter, #RandoGame, #battleShipGame, #me, #spotlight, #lackluster { /* These ID's are essentially the images...*/
-		width: 130px;
-		height:110px;
-		float:right;
-	}	
-	#me, #spotlight, #lackluster {
-		height:130px;
-		float:right;
-	}
-	#meText p {
-		width:33%;
-	}
-  .quoteRotator .quoteContent p {
-    width:auto;
-  }
-  
-  .quoteRotator .quoteContent img {
-    width:35rem;
-  }
 }
 @media only screen and (min-width: 0em) and (max-width:60em) and (orientation:portrait) { /* Phone Portrait*/
 	.quoteRotator {
 		font-size: 60%;
 		width:85%;
 	}
-	.quoteRotator img {
-		width: 60px;
-		height:130px;
-	}
   .quoteRotator .quoteContent p {
     float:none;
+    width:100%;
   }
-  
-  .quoteRotator .quoteContent img {
+  .projectImg {
+    float:none;
     width:auto;
+    max-height:165px;
+  }
+  .link {
+    font-size:0.58rem;
   }
 }
