@@ -2,7 +2,7 @@
   var Modernizr = window.Modernizr;
   $.abtRotator = {
     defaults: {
-      rotateSpeed: 8000,
+      rotateSpeed: 15000,
       pauseOnHoverEnabled: true,
       prevNextButtonsEnabled: true
     }

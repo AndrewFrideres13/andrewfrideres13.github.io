@@ -1,74 +1,114 @@
-
 <footer>
-	   <div class="hud">
-		  <div class="ammo box">
-			 <div class="number">25</div>
-			 Ammo
-		  </div>
-		  <div class="health box">
-			 <div class="number">100%</div>
-			 Health
-		  </div>
-		  <div class="arms box">
-			 <div class="numberpad">
-				<div class="tooltip"><a href="index.html"><button>2</button></a><span class="tooltiptext">Home</span></div><!--
-				--><div class="tooltip"><a href="gamesPortal.html"><button>3</button></a><span class="tooltiptext games">Games</span></div><!--
+  <div class="hud">
+    <div class="ammo box">
+      <div class="number">25</div>
+      Ammo
+    </div>
+    <div class="health box">
+      <div class="number">100%</div>
+      Health
+    </div>
+    <div class="arms box">
+      <div class="numberpad">
+        <button>2</button
+        ><!--
+				--><button>3</button
+        ><!--
 				--><button>4</button><br /><!--
 				--><button>5</button><button>6</button><button>7</button>
-			 </div>
-			 Arms
-		  </div>
-	 	  <a class="avatar box tooltip" href="about.html">
-			<span class="abtTooltiptext">Me</span>
-			<div class="avatarTxt">Click Me</div> 
-		  </a>
-		  <div class="armor box">
-			 <div class="number">200%</div>
-			 Armor
-		  </div>
-		  <div class="lives box">
-			 <div id="outsideLinks"><a href="https://www.linkedin.com/in/andrew-frideres-231057107"><img src="./Pics/ln.png" alt="AndrewFrideres@Linked In"
-				height="28px" width="28px" /></a></div>
-			 <br />
-			 <div id="outsideLinks"><a href="https://github.com/AndrewFrideres13"><img src="./Pics/git.png" alt="AndrewFrideres13@Github"
-				height="28px" width="28px" /></a><br /></div>
-			 <div id="outsideLinks"><a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><img src="./Pics/mail.png" alt="Email Me (Afrideres)"
-				height="28px" width="28px" /></a></div>
-		  </div>
-		  <div class="info box"><!--
-			 --><a>TopSkills:JS/C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><!--
-       --><a>Engines:Unity/Unreal</a><!--
-			 --><a>Other:Java/VB/C++&nbsp;&nbsp;&nbsp;</a><!--
-			 --><a>DB:PHP/MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><!--
+      </div>
+      Arms
+    </div>
+    <a class="avatar box tooltip">
+      <div class="avatarTxt">Frideres</div>
+    </a>
+    <div class="armor box">
+      <div class="number">200%</div>
+      Armor
+    </div>
+    <div class="lives box">
+      <div id="outsideLinks">
+        <a href="https://www.linkedin.com/in/andrew-frideres-231057107"
+          ><img
+            src="./Pics/ln.png"
+            alt="AndrewFrideres@Linked In"
+            height="28px"
+            width="28px"
+        /></a>
+      </div>
+      <br />
+      <div id="outsideLinks">
+        <a href="https://github.com/AndrewFrideres13"
+          ><img
+            src="./Pics/git.png"
+            alt="AndrewFrideres13@Github"
+            height="28px"
+            width="28px" /></a
+        ><br />
+      </div>
+      <div id="outsideLinks">
+        <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"
+          ><img
+            src="./Pics/mail.png"
+            alt="Email Me (Afrideres)"
+            height="28px"
+            width="28px"
+        /></a>
+      </div>
+    </div>
+    <div class="info box">
+      <!--
+			 --><a>TopSkills:JS/C#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+      ><!--
+       --><a>Engines:Unity/Unreal</a
+      ><!--
+			 --><a>Other:Java/VB/C++&nbsp;&nbsp;&nbsp;</a
+      ><!--
+			 --><a>DB:PHP/MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+      ><!--
 			 
 		  --></div>
-		  <!-- Nav Links -->
-	   <!-- Our True Hud without the extra bits on the side -->
-	</div>
-	<!-- End of our container for the DOOM Hud -->
-	<script>
-
-		//Need to change this to on window changed, so it fires more often, fix width?
-		function scaleAvatar () {
-			var avatar =  document.getElementsByClassName("avatar")[0];
-			var posInfo = avatar.getBoundingClientRect();
-      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+    <!-- Nav Links -->
+    <!-- Our True Hud without the extra bits on the side -->
+  </div>
+  <!-- End of our container for the DOOM Hud -->
+  <script>
+    //Need to change this to on window changed, so it fires more often, fix width?
+    function scaleAvatar() {
+      var avatar = document.getElementsByClassName("avatar")[0];
+      var hud = document.getElementById("HUD");
+      var posInfo = avatar.getBoundingClientRect();
+      var width =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+      var height =
+        window.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight;
       if (width < 960) {
-        var storedX = posInfo.width-60;
+        var storedX = posInfo.width - 60;
       } else {
-        var storedX = posInfo.width-30;
+        var storedX = posInfo.width - 30;
       }
-			if (storedX > 200) {
-				storedX = 200;
-			}
-			var storedY = posInfo.height-30;
-			
-			avatar.style.backgroundSize = storedX + "px" + " " + storedY + "px";
-		}
-		scaleAvatar();
-		window.addEventListener('resize', scaleAvatar);
-	</script>
- </footer>
- 
- 
+      if (storedX > 200) {
+        storedX = 200;
+      }
+      var storedY = posInfo.height - 30;
+      //Adjust to ensure our HUD always matches up
+      hud.style.width = window.innerWidth + "px";
+      avatar.style.backgroundSize = storedX + "px" + " " + storedY + "px";
+    }
+    scaleAvatar();
+    window.addEventListener("resize", scaleAvatar);
+
+    //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
+    $(function () {
+      $("#HUD")
+        .delay(7500)
+        .fadeTo(5000, 1, function () {
+          $("#HUD").show();
+        });
+    });
+  </script>
+</footer>

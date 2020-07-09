@@ -31,7 +31,16 @@
   list-style: none;
   outline-style: none;
 }
-p, .quoteContent, h1, h2, .quoteRotator button {
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+p,
+.quoteContent,
+h1,
+.quoteRotator button {
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
     2px 2px 0 #000, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
 }
@@ -45,10 +54,13 @@ html {
   /* Default Text color for entire page */
   text-shadow: 0.15em 0.15em 0 rgba(0, 0, 0, 0.5);
   text-align: center;
+  overflow: hidden;
 }
 
+/* Used for hidden text for SSO, Screen readers on images, WIP content */
+
 #hidden {
-  transform: translate(-999px,0);
+  transform: translate(-999px, 0);
   display: none;
 }
 
@@ -64,50 +76,39 @@ body {
   flex-flow: column nowrap;
 }
 
-canvas {
-  /* DOOM game */
-  margin: 0 auto;
-  padding: 1rem 1rem;
-  cursor: url("../Pics/gameAssets/chair.ico"), auto !important;
-  /*Must be done to override default cursor set on page for DOOM game*/
-}
-
 /* Our various backgrounds for pages */
 
-.bg {
+.startUpBG {
   background-image: url("../Pics/bg.png");
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  flex: 1 0 auto;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.7;
 }
 
-.cBG {
-  background-image: url("../Pics/cBG.png");
+.startUpBG p {
+  font-size: 1.3rem;
+  line-height: 1.75rem;
 }
 
 .abtBG {
   background-image: url("../Pics/aBG.png");
-}
-
-.gBG {
-  background-image: url("../Pics/mBG.png");
-}
-
-.bgGames {
-  background-image: url("../Pics/bgGames.png");
-}
-
-.gameBG {
-  background-image: url("../Pics/gameBG.png");
-}
-
-.bg,
-.cBG,
-.abtBG,
-.gBG,
-.bgGames,
-.gamesBG {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  display: none;
+  overflow-y: hidden;
   flex: 1 0 auto;
   background-size: cover;
   background-position: center center;
-  opacity:0.7;
+  opacity: 0.7;
+  position: relative;
 }
 
 /* End various backgrounds for pages */
@@ -122,7 +123,7 @@ canvas {
   text-transform: uppercase;
   border: 2px solid;
   border-color: #727274 #262626 #262626 #727274;
-   flex-grow: 1;
+  flex-grow: 1;
 }
 
 .health {
@@ -150,6 +151,8 @@ canvas {
   bottom: -5px;
   left: 0;
   z-index: 1;
+  opacity: 0;
+  display: none;
 }
 
 .hud {
@@ -163,26 +166,45 @@ canvas {
 
 /* End general head setup*/
 
+/* Hover Checks */
+
+@media (hover: hover) and (pointer: fine) {
+  .numberpad button:hover {
+    transition: color 0.3s;
+    color: #ffff9a;
+    border-color: #262626 #727274 #727274 #262626;
+  }
+  #outsideLinks:hover {
+    border-color: #262626 #727274 #727274 #262626;
+  }
+  .info a:hover,
+  .link {
+    transition: color 0.3s;
+    color: #ffff9a;
+  }
+  .link:hover,
+  button:hover {
+    transition: color 0.3s;
+    color: #bd0102;
+    text-shadow: -2px -2px 0 #3d0002, 2px -2px 0 #3d0002, -2px 2px 0 #3d0002,
+      2px 2px 0 #3d0002, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  #idSoftwareCredit:hover {
+    color: #bd0102;
+    text-shadow: -2px -2px 0 #3d0002, 2px -2px 0 #3d0002, -2px 2px 0 #3d0002,
+      2px 2px 0 #3d0002, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
 /* Styles for the ARMS numbers */
 
 .numberpad {
   margin-bottom: 15px;
 }
 
-.numberpad a button {
-  color: #ffff9a;
-  cursor: pointer;
-}
-
-.numberpad a button:hover {
-  transition: color 0.3s;
-  color: #bd0102;
-  border-color: #262626 #727274 #727274 #262626;
-}
-
-.numberpad a button:not(:hover) {
-  transition: color 0.8s;
-  color: #ffff9a;
+.numberpad button {
+  cursor: default;
 }
 
 .avatar {
@@ -192,6 +214,7 @@ canvas {
   background-position: center top;
   align-content: center;
   min-width: 100px;
+  background-size: 6.5rem;
 }
 
 .avatarTxt {
@@ -230,12 +253,6 @@ button {
   display: inline-block;
 }
 
-@media(hover: hover) and (pointer: fine) {
-  #outsideLinks:hover {
-    border-color: #262626 #727274 #727274 #262626;
-  }
-}
-
 #outsideLinks {
   width: 70%;
 }
@@ -256,65 +273,9 @@ button {
   justify-content: center;
 }
 
-.info a:hover,
-.link {
-  transition: color 0.3s;
-  color: #ffff9a;
-}
-
-.link:hover, button:hover {
-  transition: color 0.3s;
-  color: #bd0102;
-  text-shadow: -2px -2px 0 #3d0002, 2px -2px 0 #3d0002, -2px 2px 0 #3d0002,
-    2px 2px 0 #3d0002, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
-  cursor:pointer;
-}
-
 .info a:not(:hover) {
   transition: color 0.8s;
   color: #a1a1a1;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltiptext,
-.abtTooltiptext {
-  opacity: 0;
-  transition: opacity 0.5s;
-  /* Set this up so we show the tool-tip seamlessly */
-  font-size: 80%;
-  height: 20px;
-  background-color: #535353;
-  color: #bd0102;
-  padding: 5px 0;
-  left: 50%;
-  bottom: 100% !important;
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-}
-
-.abtTooltiptext {
-  width: 120px;
-  margin-left: -50%;
-}
-
-.tooltiptext {
-  width: 200px;
-  margin-left: -140%;
-}
-
-.games {
-  margin-left: -240%;
-}
-
-.tooltip:hover .tooltiptext,
-.tooltip:hover .abtTooltiptext {
-  /*On hover grab the text associated with the particular hover*/
-  opacity: 1;
 }
 
 /* End NAV styling */
@@ -326,55 +287,7 @@ button {
   font-size: 120%;
 }
 
-#idSoftwareCredit:hover {
-  color: #bd0102;
-  text-shadow: -2px -2px 0 #3d0002, 2px -2px 0 #3d0002, -2px 2px 0 #3d0002,
-    2px 2px 0 #3d0002, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
-}
-
-/* Specific styles for Classics, Gems, & gamesPortal pages */
-
-.returnToTop {
-  margin: 10% 0 10% 0;
-  clear: both;
-  width: 100%;
-}
-
-.returnToTop a:hover,
-section > h2 > a:hover {
-  transition: color 0.5s;
-  color: #ffff9a;
-}
-
-.gameInfo {
-  clear: both;
-  width: 55%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.gemSection {
-  float: right;
-  padding: 1em;
-}
-
-.classicSection {
-  position: absolute;
-  float: left;
-  padding: 1em;
-}
-
-#picText {
-  /* Screen reader & spacing support essentially */
-  text-indent: -999rem;
-  overflow: hidden;
-}
 @media only screen and (min-width: 0em) and (max-width: 100em) {
-  .dGame {
-    /* Future proofing making the doom game not appear on smaller screens */
-    display: none;
-  }
-
   .info,
   .health,
   .ammo {
@@ -383,20 +296,11 @@ section > h2 > a:hover {
   }
 }
 
-/* General Tablet adjustments */
-@media only screen and (min-width: 60em) and (max-width: 100em) {
-  .avatar img {
-    transform: scale(1.25, 1);
-  }
-}
-@media only screen and (min-width: 60em) and (max-width: 100em) and (orientation: portrait) {
-  .box {
-    font-size: 90%;
-  }
-}
 /* End Specific styles for Class, and Gems pages */
-
-@media only screen and (min-width: 0em) and (max-width: 60em) and (orientation: portrait) {
+@media only screen and (min-width: 0em) and (max-width: 50em) and (orientation: portrait) {
+  .abtBG {
+    padding-bottom: 15.5rem;
+  }
   /*Phone portrait size*/
   .lives {
     flex-basis: 30px;
@@ -405,42 +309,11 @@ section > h2 > a:hover {
   .aboutText {
     line-height: 13px;
   }
-  /*GamesPortal adjusts*/
-  h2 {
-    font-size: 85%;
-  }
-  .gemSection {
-    padding: 70% 0 0 0;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .gemSection img,
-  .classicSection img {
-    width: 55%;
-    margin: 0 auto;
-  }
-  .classicSection {
-    width: 100%;
-    padding: 5px 0 0 0;
-    margin: 0 auto;
-  }
-  /* Actual CLassics/Gems pages adjusts*/
-  h3 img {
-    width: 70%;
-  }
-  .gameInfo {
-    width: 90%;
-    font-size: 70%;
-  }
   /*HUD adjusts for phone size*/
   #HUD {
     max-width: 57em;
     margin: 0 auto;
     position: relative;
-    top: 0;
-    /* Reset the position top to prevent any weird paddings */
-    /* Our HUD will hide the return to top on phones in portrait...but this is okay since
-	  scrolling on phones is quick and easy, thus making the return to top relatively useless */
   }
   .box {
     min-height: 60px;
@@ -472,6 +345,7 @@ section > h2 > a:hover {
   }
   .avatar {
     max-width: 130px;
+    background-size: 3.5rem;
   }
   .avatar img {
     /*bring img back up with negative percent*/
@@ -494,18 +368,19 @@ section > h2 > a:hover {
 
 @media only screen and (min-width: 0em) and (max-width: 60em) and (orientation: landscape) {
   /* Styles for phone landscape..pretty much just need to shrink stuff down adjust percents where necessary */
+  .abtBG {
+    padding-bottom: 15.5rem;
+  }
   main {
     font-size: 70%;
   }
-
   .box:not(.lives) {
     padding: 5px;
   }
   #HUD {
     position: relative;
     z-index: 1000000;
-    top: 0;
-    /*Need this else we get a weird bit of trim above footer*/
+    bottom: 0;
   }
   .number {
     font-size: 155%;
@@ -515,7 +390,6 @@ section > h2 > a:hover {
   .numberpad {
     margin-bottom: 7px;
   }
-
   #outsideLinks {
     width: 50%;
     padding: 4px;
@@ -532,26 +406,31 @@ section > h2 > a:hover {
     font-size: 76%;
     line-height: 200%;
   }
-  h2 {
-    font-size: 85%;
+  .avatar {
+    background-size: 5rem;
   }
-  .gemSection {
-    float: right;
-    width: 50%;
-    margin: 0 auto;
+}
+
+/* General Tablet adjustments */
+@media only screen and (min-width: 60) and (max-width: 100em) and (orientation: landscape) {
+  .abtBG {
+    padding-bottom: 4.5rem;
   }
-  .gemSection img,
-  .classicSection img {
-    width: 44%;
-    margin: 0 auto;
+
+  #HUD {
+    position: relative;
+    bottom: 0;
   }
-  .classicSection {
-    float: right;
-    width: 50%;
-    padding: 5px 0 0 0;
-    margin: 0 auto;
+}
+
+@media only screen and (min-width: 40em) and (max-width: 100em) and (orientation: portrait) {
+  .abtBG {
+    padding-bottom: 10.5rem;
   }
-  .gameInfo img {
-    width: 50%;
+  .avatar {
+    background-size: 3.5rem;
+  }
+  .box {
+    font-size: 90%;
   }
 }

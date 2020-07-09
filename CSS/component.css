@@ -1,35 +1,30 @@
 .quoteRotator {
-	position: relative;    /* positioning parent */
-	margin: 0.7rem auto 6.8rem auto;  /* center with varying top and bottom margins */
-	max-width: 1050px;
-	width: 100%;
-	min-height: 400px;
+  position: relative;
+  /* positioning parent */
+  margin: 0.7rem auto 6.8rem auto;
+  /* center with varying top and bottom margins */
+  max-width: 1050px;
+  width: 100%;
+  min-height: 400px;
 }
 
 .quoteRotator .quoteContent {
-	position: absolute;
-	min-height: 200px;
-	max-height: 650px;
-	border-top: 1px solid #bd0102;
-	padding: 0.3em 0;
-	top: 0;
-	z-index: 0;
-	opacity: 0;   /* hide this content via transparency for now... */
-	width: 100%;
-}
-
-.quoteRotator .quoteContent.quoteCurrent,
-.no-js .quoteRotator .quoteContent {
-	position: relative; 
-	z-index: 100;
-	pointer-events: auto;
-	opacity: 1;   /* show the current quote */
+  min-height: 200px;
+  max-height: 650px;
+  border-top: 1px solid #bd0102;
+  padding: 0.3em 0;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  pointer-events: auto;
+  opacity: 1;
+  /* show the current quote */
 }
 
 .quoteRotator .quoteContent:before,
 .quoteRotator .quoteContent:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
   clear: both;
 }
 
@@ -46,67 +41,87 @@
 }*/
 
 .quoteRotator blockquote {
-	margin: 0;
-	padding: 0;
-  width:100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
 }
 
 .quoteRotator blockquote p {
-	float: left;
-	font-size: 1em;
-	margin: 0.2em 0 1em;
-  width:60%;
-  line-height: 1.35rem;
+  float: left;
+  font-size: 1em;
+  margin: 0.2em 0 1em;
+  width: 60%;
+  line-height: 1.5rem;
+  text-align: justify;
 }
 
 .quoteRotator blockquote footer {
-	font-size: 1.3em;
-  clear:both;
-  padding:1rem 0 0 0;
+  font-size: 1.3em;
+  clear: both;
+  padding: 1rem 0 0 0;
+  line-height: 1.5rem;
 }
 
-.prevBttn, .nextBttn {
-  color:#FFFF9A;
-  cursor:pointer; /* Ensures these buttons show they're clickable */
+.prevBttn,
+.nextBttn {
+  color: #ffff9a;
+  cursor: pointer;
+  /* Ensures these buttons show they're clickable */
 }
 
 .projectImg {
-  float:left;
-  width:36.5%;
+  float: left;
+  width: 36.5%;
+  padding-left: 15px;
 }
 
-@media(hover: hover) and (pointer: fine) {
-  .prevBttn:hover, .nextBttn:hover  {
+@media (hover: hover) and (pointer: fine) {
+  .prevBttn:hover,
+  .nextBttn:hover {
     border-color: #262626 #727274 #727274 #262626;
   }
 }
 
-@media only screen and (min-width: 0em) and (max-width:60em) and (orientation:landscape){ /*Phone Landscape size*/
-	.quoteRotator {
-		width: 90%;
-		margin: 0.7rem auto 3.8rem auto;  /* center with varying top and bottom margins */
-		min-height: 200px;
-	}
-	.quoteRotator .quoteContent footer {
-		clear:both;
-		width:100%;
-	}
+@media only screen and (min-width: 0em) and (max-width: 60em) and (orientation: landscape) {
+  /*Phone Landscape size*/
+  .quoteRotator {
+    width: 90%;
+    margin: 0.7rem auto 3.8rem auto;
+    /* center with varying top and bottom margins */
+    min-height: 200px;
+  }
+  .quoteRotator .quoteContent footer {
+    clear: both;
+    width: 100%;
+  }
 }
-@media only screen and (min-width: 0em) and (max-width:60em) and (orientation:portrait) { /* Phone Portrait*/
-	.quoteRotator {
-		font-size: 60%;
-		width:85%;
-	}
+
+@media only screen and (min-width: 0em) and (max-width: 40em) and (orientation: portrait) {
+  /* Phone Portrait*/
+  .quoteRotator {
+    font-size: 60%;
+    width: 85%;
+  }
   .quoteRotator .quoteContent p {
-    float:none;
-    width:100%;
+    float: none;
+    width: 100%;
   }
   .projectImg {
-    float:none;
-    width:auto;
-    max-height:165px;
+    float: none;
+    width: auto;
+    max-height: 165px;
   }
   .link {
-    font-size:0.58rem;
+    font-size: 0.58rem;
+  }
+}
+
+/* General Tablet adjustments */
+
+@media only screen and (min-width: 40em) and (max-width: 100em) and (orientation: portrait) {
+  .quoteRotator {
+    width: 92.5%;
+    line-height: 1.75rem;
   }
 }
