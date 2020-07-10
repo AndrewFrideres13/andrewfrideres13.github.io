@@ -166,7 +166,7 @@ body {
 
 /* End general head setup*/
 
-/* Hover Checks */
+/* Hover Checks (Desktop/Mouse pointer only, touchscreen won't see or be affected by such) */
 
 @media (hover: hover) and (pointer: fine) {
   .numberpad button:hover {
@@ -228,7 +228,6 @@ body {
 }
 
 /* Red text for the ARMOR HEALTH AMMO and misc */
-
 .number {
   font-size: 325%;
   margin-bottom: 15px;
