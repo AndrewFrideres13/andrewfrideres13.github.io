@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="CSS/component.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -13,6 +16,16 @@
     ></script>
     <script src="js/jquery_abtMe.js"></script>
     <script>
+      //Reset for reloading page after scrolling on longer posts
+      window.scrollTo(0, 0);
+      //Prevent touchscreen attributes UNTIL we fade out the cover
+      window.addEventListener("scroll", preventMotion, false);
+      window.addEventListener("touchmove", preventMotion, false);
+
+      function preventMotion(event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
       //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
       $(function () {
         var html = document.getElementsByTagName("html")[0];
@@ -31,6 +44,9 @@
 
           $abtBG.delay(7500).fadeTo(5000, 1, function () {
             $abtBG.show();
+            //Allow touch screen/scroll events again
+            window.removeEventListener("scroll", preventMotion, false);
+            window.removeEventListener("touchmove", preventMotion, false);
           });
         } else {
           //Starting load invisible, everything else visible
@@ -40,6 +56,9 @@
           $startingBG.hide();
           html.style.overflow = "visible";
           $abtBG.show();
+          //Allow touch screen/scroll events again
+          window.removeEventListener("scroll", preventMotion, false);
+          window.removeEventListener("touchmove", preventMotion, false);
         }
 
         //Controls our project show list
@@ -176,9 +195,9 @@
         <div class="quoteContent">
           <blockquote>
             <p>
-              My first time using Unity, this is a 2D sidescroller game built for
-              touchscreen Android devices, made with Haley Peterson (artist) at
-              UW-Stout for my GDD 200 class 2019. In this game you play as a
+              My first time using Unity, this is a 2D sidescroller game built
+              for touchscreen Android devices, made with Haley Peterson (artist)
+              at UW-Stout for my GDD 200 class 2019. In this game you play as a
               little ghost boy in their quest to restore color to the bleak
               world, with a unique mechanic of using an Android devices built in
               gyroscope to control where the flashlight you use aims, using it
