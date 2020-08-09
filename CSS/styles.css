@@ -322,9 +322,9 @@ button {
     overflow: hidden;
   }
   .number {
-    margin: 15px 3.35rem 32px 0;
+    margin: 15px 0px 32px -7px;
     font-size: 160%;
-    transform: scale(1, 2);
+    transform: scale(0.85, 2);
   }
   .numberpad {
     margin-bottom: 8px;
@@ -334,6 +334,10 @@ button {
   .arms,
   .lives {
     width: 25%;
+  }
+  .armor {
+    width: 20%;
+    margin: 0 0 0 -5px;
   }
   .arms {
     width: 35%;
@@ -352,12 +356,12 @@ button {
     margin: -25% auto;
   }
   #outsideLinks {
-    width: 65%;
-    height: 24%;
-    margin: 0 0 0 -0.09375rem;
+    width: 124%;
+    height: 25%;
+    margin: 0 0 0 -0.6rem;
   }
   #outsideLinks:first-child {
-    margin-top: -6px;
+    margin-top: -10px;
   }
   #outsideLinks a img,
   #outsideLinks a {
