@@ -313,7 +313,7 @@ button {
   #HUD {
     max-width: 57em;
     margin: 0 auto;
-    position: relative;
+    position: static;
   }
   .box {
     min-height: 60px;
@@ -361,7 +361,7 @@ button {
   #outsideLinks {
     width: 145%;
     height: 25%;
-    margin: 0 0 0 -0.6rem;
+    margin: 0 0 0.1rem -0.6rem;
   }
   #outsideLinks:first-child {
     margin-top: -10px;

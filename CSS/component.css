@@ -112,8 +112,14 @@
     width: auto;
     max-height: 165px;
   }
+  .nxtPrevButtons {
+	  padding: 3.35rem 0 0 0;
+  }
   .link {
     font-size: 0.58rem;
+  }
+  .clickable {
+	font-size: 0.825rem;
   }
 }
 
