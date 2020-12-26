@@ -79,7 +79,7 @@ body {
 /* Our various backgrounds for pages */
 
 .startUpBG {
-  background-image: url("../Pics/bg.png");
+  background-image: url("../Pics/bg.webp");
   z-index: 1000;
   width: 100%;
   height: 100%;
@@ -96,7 +96,7 @@ body {
 }
 
 .abtBG {
-  background-image: url("../Pics/aBG.png");
+  background-image: url("../Pics/aBG.webp");
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -208,7 +208,7 @@ body {
 
 .avatar {
   background-color: #131d14;
-  background-image: url("../Pics/DoomMe.PNG");
+  background-image: url("../Pics/DoomMe.webp");
   background-repeat: no-repeat;
   background-position: center top;
   align-content: center;
