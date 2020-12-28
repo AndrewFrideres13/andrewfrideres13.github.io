@@ -380,7 +380,7 @@ button {
   }
 }
 
-@media only screen and (min-width: 0em) and (max-width: 55em) and (orientation: landscape) {
+@media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
   /* Styles for phone landscape..pretty much just need to shrink stuff down adjust percents where necessary */
   .abtBG {
     padding-bottom: 15.5rem;
