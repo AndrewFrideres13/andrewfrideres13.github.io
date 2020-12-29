@@ -258,12 +258,12 @@ button {
   width: 70%;
 }
 
-.fa-envelope, .fa-github-square, .fa-linkedin {
-  transform: scale(1.3, 1.2);
+.fa-google, .fa-github-square, .fa-linkedin {
+  transform: scale(1.35, 1.25);
   color:  #a1a1a1;
 }
 
-.fa-envelope:hover, .fa-github-square:hover, .fa-linkedin:hover {
+.fa-google:hover, .fa-github-square:hover, .fa-linkedin:hover {
   transition: color 0.5s;
   color: #ffff9a;
 }
@@ -375,13 +375,13 @@ button {
     margin-top: -10px;
   }
   #outsideLinks a,
-  .fa-envelope, .fa-github-square, .fa-linkedin  {
+  .fa-google, .fa-github-square, .fa-linkedin  {
     width: 100%;
     height: 100%;
   }
 
-  .fa-envelope, .fa-github-square, .fa-linkedin  {
-    transform: scale(1.35, 1.35);
+  .fa-google, .fa-github-square, .fa-linkedin  {
+    transform: scale(1.85, 2.05);
     margin: 0 0 0 -6px;
   }
 }
@@ -416,7 +416,7 @@ button {
   #outsideLinks:first-child {
     margin-top: -2px;
   }
-  .fa-envelope  {
+  .fa-google  {
     width: 100%;
     height: 100%;
     transform: scale(1.1);
