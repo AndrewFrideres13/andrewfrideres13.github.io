@@ -60,13 +60,6 @@ html {
   overflow: hidden;
 }
 
-/* Used for hidden text for SSO, Screen readers on images, WIP content */
-
-#hidden {
-  transform: translate(-999px, 0);
-  display: none;
-}
-
 header {
   padding-top: 5px;
 }
