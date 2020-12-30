@@ -254,6 +254,7 @@ button {
 .fa-google, .fa-github-square, .fa-linkedin {
   transform: scale(1.35, 1.25);
   color:  #a1a1a1;
+  padding-bottom:2.5px;
 }
 
 .fa-google:hover, .fa-github-square:hover, .fa-linkedin:hover {
@@ -376,6 +377,7 @@ button {
   .fa-google, .fa-github-square, .fa-linkedin  {
     transform: scale(1.85, 2.05);
     margin: 0 0 0 -6px;
+	padding-bottom: 0;
   }
 }
 
