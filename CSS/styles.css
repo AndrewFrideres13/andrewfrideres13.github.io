@@ -255,6 +255,7 @@ button {
   transform: scale(1.35, 1.25);
   color:  #a1a1a1;
   padding-bottom:2.5px;
+  filter: drop-shadow(0.1em 0.1em 0 rgba(0, 0, 0, 0.5));
 }
 
 .fa-google:hover, .fa-github-square:hover, .fa-linkedin:hover {
