@@ -42,7 +42,7 @@
 
 p,
 .quoteContent,
-h1,
+h1, h2
 .quoteRotator button {
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
     2px 2px 0 #000, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
