@@ -89,6 +89,8 @@ body {
 .startUpBG p {
   font-size: 1.3rem;
   line-height: 1.75rem;
+  width: 97.5%;
+  margin: 0 auto;
 }
 
 .abtBG {
