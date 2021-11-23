@@ -358,16 +358,16 @@ button {
   }
   .avatar {
     max-width: 130px;
-    background-size: 6.5rem;
+    background-size: 8.5rem;
   }
   .avatar img {
     /*bring img back up with negative percent*/
-    margin: -25% auto;
+    margin: -20% auto;
   }
   #outsideLinks {
     width: 145%;
     height: 25%;
-    margin: 0 0 0.075rem -0.6rem;
+    margin: 0 0 0.05rem -0.6rem;
   }
   #outsideLinks:first-child {
     margin-top: -10px;
@@ -381,6 +381,9 @@ button {
     transform: scale(1.85, 2.05);
     margin: 0 0 0 -6px;
 	padding-bottom: 0;
+  }
+  .fa-google  {
+    margin: 0 0 -1px 0;
   }
 }
 
@@ -455,11 +458,5 @@ button {
   }
   button {
     margin: 0.5px;
-  }
-  #outsideLinks {
-    margin-bottom: 0.05rem;
-  }
-  .fa-google  {
-    margin: 0 0 -1.75px 0;
   }
 }
