@@ -328,7 +328,7 @@ button {
     overflow: hidden;
   }
   .number {
-    margin: 15px 0px 32px -2.5px;
+    margin: 15px 0px 32px -2.85px;
     font-size: 160%;
     transform: scale(0.85, 2.35);
   }
@@ -358,11 +358,11 @@ button {
   }
   .avatar {
     max-width: 130px;
-    background-size: 8.5rem;
+    background-size: 9.5rem;
   }
   .avatar img {
     /*bring img back up with negative percent*/
-    margin: -20% auto;
+    margin: -15% auto;
   }
   #outsideLinks {
     width: 145%;
@@ -383,7 +383,7 @@ button {
 	padding-bottom: 0;
   }
   .fa-google  {
-    margin: 0 0 -1px 0;
+    margin-bottom: -0.064rem;
   }
 }
 
