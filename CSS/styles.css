@@ -19,7 +19,7 @@
     /* Safari, Android, iOS */
     url("fonts/press-start-2p-v6-latin-regular.svg#PressStart2P")
       format("svg");
-  /* Legacy iOS */
+	/* Legacy iOS */
 }
 
 * {
@@ -102,6 +102,7 @@ body {
   opacity: 1;
   display: none;
   overflow-y: hidden;
+  overflow-x: hidden;
   flex: 1 0 auto;
   background-size: cover;
   background-position: center center;
@@ -327,7 +328,7 @@ button {
     overflow: hidden;
   }
   .number {
-    margin: 15px 0px 32px -2px;
+    margin: 15px 0px 32px -2.5px;
     font-size: 160%;
     transform: scale(0.85, 2.35);
   }
@@ -357,7 +358,7 @@ button {
   }
   .avatar {
     max-width: 130px;
-    background-size: 4.25rem;
+    background-size: 5.5rem;
   }
   .avatar img {
     /*bring img back up with negative percent*/
@@ -366,7 +367,7 @@ button {
   #outsideLinks {
     width: 145%;
     height: 25%;
-    margin: 0 0 0.1rem -0.6rem;
+    margin: 0 0 0.075rem -0.6rem;
   }
   #outsideLinks:first-child {
     margin-top: -10px;
@@ -376,7 +377,6 @@ button {
     width: 100%;
     height: 100%;
   }
-
   .fa-google, .fa-github-square, .fa-linkedin  {
     transform: scale(1.85, 2.05);
     margin: 0 0 0 -6px;
@@ -445,7 +445,7 @@ button {
     padding-bottom: 10.5rem;
   }
   .avatar {
-    background-size: 5rem;
+    background-size: 6.5rem;
   }
   .box {
     font-size: 90%;
