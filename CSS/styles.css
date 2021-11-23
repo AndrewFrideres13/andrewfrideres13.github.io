@@ -353,11 +353,11 @@ button {
   button {
     font-size: 165%;
     padding: 2px 0.9px 2px 0.9px;
-    margin: 1px;
+    margin: 0.5px;
   }
   .avatar {
     max-width: 130px;
-    background-size: 3.5rem;
+    background-size: 4.25rem;
   }
   .avatar img {
     /*bring img back up with negative percent*/
@@ -445,9 +445,12 @@ button {
     padding-bottom: 10.5rem;
   }
   .avatar {
-    background-size: 3.5rem;
+    background-size: 5rem;
   }
   .box {
     font-size: 90%;
+  }
+  button {
+    margin: 0.5px;
   }
 }
