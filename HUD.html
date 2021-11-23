@@ -47,14 +47,14 @@
             var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             if (width < 960) {
-                var storedX = posInfo.width - 30;
+                var storedX = posInfo.width - 45;
             } else {
-                var storedX = posInfo.width - 15;
+                var storedX = posInfo.width - 30;
             }
             if (storedX > 200) {
                 storedX = 200;
             }
-            var storedY = posInfo.height - 10;
+            var storedY = posInfo.height - 15;
             //Adjust to ensure our HUD always matches up
             hud.style.width = window.innerWidth + "px";
             avatar.style.backgroundSize = storedX + "px" + " " + storedY + "px";
