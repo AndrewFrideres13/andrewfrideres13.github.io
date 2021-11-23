@@ -358,7 +358,7 @@ button {
   }
   .avatar {
     max-width: 130px;
-    background-size: 5.5rem;
+    background-size: 6.5rem;
   }
   .avatar img {
     /*bring img back up with negative percent*/
@@ -445,12 +445,21 @@ button {
     padding-bottom: 10.5rem;
   }
   .avatar {
-    background-size: 6.5rem;
+    background-size: 7.5rem;
   }
   .box {
     font-size: 90%;
   }
+  .number {
+	margin-left:-5px;
+  }
   button {
     margin: 0.5px;
+  }
+  #outsideLinks {
+    margin-bottom: 0.075rem;
+  }
+  .fa-google  {
+    margin: 0 0 -1px 0;
   }
 }
