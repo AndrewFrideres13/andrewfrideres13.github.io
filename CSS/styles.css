@@ -320,7 +320,7 @@ button {
     overflow: hidden;
   }
   .number {
-    margin: 15px 0px 32px -0.23rem;
+    margin: 15px 0px 32px -0.26rem;
     font-size: 160%;
     transform: scale(0.85, 2.35);
   }
@@ -371,11 +371,11 @@ button {
   }
   .fa-google, .fa-github-square, .fa-linkedin  {
     transform: scale(1.85, 2.05);
-    margin: 0 0 0 -6px;
-	padding-bottom: 0;
+    margin: 0 0 -0.064rem -6px;
+    padding-bottom: 0;
   }
   .fa-google  {
-    margin-bottom: -0.064rem;
+    margin-bottom: -1.25rem;
   }
 }
 
@@ -420,6 +420,9 @@ button {
   }
   .avatar {
     background-size: 5rem;
+  }
+  .avatarTxt {
+    font-size: 0.75rem;
   }
 }
 
