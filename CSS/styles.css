@@ -97,15 +97,13 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 1;
-  display: none;
-  overflow-y: hidden;
-  overflow-x: hidden;
   flex: 1 0 auto;
   background-size: cover;
   background-position: center center;
+  display: none;
   opacity: 0.7;
-  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /*Below is ALL stuff for the HUD footer element*/
