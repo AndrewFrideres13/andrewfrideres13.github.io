@@ -107,7 +107,6 @@ body {
 }
 
 /*Below is ALL stuff for the HUD footer element*/
-
 .box {
   /* Effects anything with box attached to it (I.E. health box armor box avatar box etc... */
   padding: 8px;
@@ -156,11 +155,9 @@ body {
   justify-content: center;
   background: #535353;
 }
-
 /* End general hud setup*/
 
 /* Hover Checks (Desktop/Mouse pointer only, touchscreen won't see or be affected by such) */
-
 @media (hover: hover) and (pointer: fine) {
   .numberpad button:hover {
     transition: color 0.3s;
@@ -190,7 +187,6 @@ body {
 }
 
 /* Styles for the ARMS numbers */
-
 .numberpad {
   margin-bottom: 15px;
 }
@@ -230,7 +226,6 @@ body {
 }
 
 /*This is for our weapons in the ARMS section, the icons for the LinkedIn+.Github, and email icons*/
-
 #outsideLinks,
 button {
   font: inherit;
@@ -297,7 +292,7 @@ button {
 /*Phone Portrait*/
 @media only screen and (min-width: 0em) and (max-width: 40em) and (orientation: portrait) {
   .abtBG {
-    padding-bottom: 15.5rem;
+    padding-bottom: 10rem;
   }
   .lives {
     flex-basis: 30px;

@@ -1,92 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Afrideres Portfolio</title>
-	<link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="CSS/styles.css"></noscript>
-	<link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="CSS/styles.css"></noscript>
+    <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="stylesheet" href="CSS/component.css" defer/>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
-	<meta name="description" content="Portfolio maintained by Andrew Frideres,
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Portfolio maintained by Andrew Frideres,
       have Associates in IT-Software Development from Chippewa Valley Tech. College,
 	  Bachelors in CS Game Design & Dev from UW-Stout">
-	<meta name="keywords" content="Andrew Frideres Software Developer Game Developer 2021 Online Portfolio">
-	<link rel="preload" href="https://code.jquery.com/jquery-3.4.1.min.js" 
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-		crossorigin="anonymous" as="script">
-	<script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <meta name="keywords" content="Andrew Frideres Software Developer Game Developer 2021 Online Portfolio">
+    <link rel="preload" href="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" as="script">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/jquery_abtMe.js" defer></script>
     <script>
-      //Reset for reloading page after scrolling on longer posts
-      window.scrollTo(0, 0);
-      //Prevent touchscreen attributes UNTIL we fade out the cover
-      window.addEventListener("scroll", preventMotion, false);
-      window.addEventListener("touchmove", preventMotion, false);
+        //Reset for reloading page after scrolling on longer posts
+        window.scrollTo(0, 0);
+        //Prevent touchscreen attributes UNTIL we fade out the cover
+        window.addEventListener("scroll", preventMotion, false);
+        window.addEventListener("touchmove", preventMotion, false);
 
-      function preventMotion(event) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
-      $(function () {
-        var html = document.getElementsByTagName("html")[0];
-        var $startingBG = $(".startUpBG");
-        var $abtBG = $(".abtBG");
-
-        //Waits a bit then triggers fade out
-        if (document.cookie == false) {
-          //Starting load visible, everything else invisible
-          $startingBG.css("opacity", 0.7);
-          $abtBG.css("opacity", 0);
-          $startingBG.delay(8000).fadeTo(5000, 0, function () {
-            $startingBG.hide();
-            html.style.overflow = "visible";
-          });
-
-          $abtBG.delay(7500).fadeTo(5000, 1, function () {
-            $abtBG.show();
-            //Allow touch screen/scroll events again
-            window.removeEventListener("scroll", preventMotion, false);
-            window.removeEventListener("touchmove", preventMotion, false);
-          });
-        } else {
-          //Starting load invisible, everything else visible
-          $startingBG.css("opacity", 0);
-          $abtBG.css("opacity", 0.7);
-
-          $startingBG.hide();
-          html.style.overflow = "visible";
-          $abtBG.show();
-          //Allow touch screen/scroll events again
-          window.removeEventListener("scroll", preventMotion, false);
-          window.removeEventListener("touchmove", preventMotion, false);
+        function preventMotion(event) {
+            event.preventDefault();
+            event.stopPropagation();
         }
+        //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
+        $(function() {
+            var html = document.getElementsByTagName("html")[0];
+            var $startingBG = $(".startUpBG");
+            var $abtBG = $(".abtBG");
 
-        //Controls our project show list
-        $("#quoteRotator").abtRotator();
-      });
+            //Waits a bit then triggers fade out
+            if (document.cookie == false) {
+                //Starting load visible, everything else invisible
+                $startingBG.css("opacity", 0.7);
+                $abtBG.css("opacity", 0);
+                $startingBG.delay(8000).fadeTo(5000, 0, function() {
+                    $startingBG.hide();
+                    html.style.overflow = "visible";
+                });
+
+                $abtBG.delay(7500).fadeTo(5000, 1, function() {
+                    $abtBG.show();
+                    //Allow touch screen/scroll events again
+                    window.removeEventListener("scroll", preventMotion, false);
+                    window.removeEventListener("touchmove", preventMotion, false);
+                });
+            } else {
+                //Starting load invisible, everything else visible
+                $startingBG.css("opacity", 0);
+                $abtBG.css("opacity", 0.7);
+
+                $startingBG.hide();
+                html.style.overflow = "visible";
+                $abtBG.show();
+                //Allow touch screen/scroll events again
+                window.removeEventListener("scroll", preventMotion, false);
+                window.removeEventListener("touchmove", preventMotion, false);
+            }
+
+            //Controls our project show list
+            $("#quoteRotator").abtRotator();
+        });
     </script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script
     ><![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="startUpBG">
-      <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
-      <header>
-        <h1>AFrideres Portfolio</h1>
-        <p>
-          Screenshots on website from the game DOOM II by
-          <a id="idSoftwareCredit" href="https://www.idsoftware.com"
-            >ID Software.</a
+        <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
+        <header>
+            <h1>AFrideres Portfolio</h1>
+            <p>
+                Screenshots on website from the game DOOM II by
+                <a id="idSoftwareCredit" href="https://www.idsoftware.com">ID Software</a
           >
           <br />I am <b>NOT</b> affiliated with ID Software, or own DOOM.
           <br />All credit goes to ID Software and their respective owners.
@@ -243,31 +235,20 @@
               >
                 Lack Luster
               </a>
-            </footer>
-          </blockquote>
-        </div>
-        <div class="quoteContent">
-          <blockquote>
+                </footer>
+                </blockquote>
+    </div>
+    <div class="quoteContent">
+        <blockquote>
             <p>
-              Part of my 450 GDD Capstone Fall 2019-Spring 2020, a 3D action
-              adventure game made in Unity, You play as a shipwrecked Viking who
-              has crashed on an island within the arctic. Fitted with only your
-              fishing rod, you set out to catch fish in order to survive the
-              ordeal. After wandering the island for a time, you discover an
-              altar deep within the island dedicated to Njord, God of the Sea.
-              Offering some of your bounty to Njord, he aids you by turning your
-              rod into a weapon capable of surviving the terrors of the night to
-              come...
+                Part of my 450 GDD Capstone Fall 2019-Spring 2020, a 3D action adventure game made in Unity, You play as a shipwrecked Viking who has crashed on an island within the arctic. Fitted with only your fishing rod, you set out to catch fish in order to survive
+                the ordeal. After wandering the island for a time, you discover an altar deep within the island dedicated to Njord, God of the Sea. Offering some of your bounty to Njord, he aids you by turning your rod into a weapon capable of surviving
+                the terrors of the night to come...
             </p>
-            <img
-              class="projectImg"
-              src="./Pics/fiskur.webp"
-              alt="Spring 2020 Fiskur Poster"
-            />
+            <img class="projectImg" src="./Pics/fiskur.webp" alt="Spring 2020 Fiskur Poster" />
             <footer>
-              Fiskur Download:
-              <a class="clickable" href="https://castirongames2020.gitlab.io/"
-                >https://castirongames2020</a
+                Fiskur Download:
+                <a class="clickable" href="https://castirongames2020.gitlab.io/">https://castirongames2020</a
               >
             </footer>
           </blockquote>
