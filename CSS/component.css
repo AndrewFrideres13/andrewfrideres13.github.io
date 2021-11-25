@@ -59,7 +59,7 @@
   padding: 1rem 0 0 0;
   line-height: 1.5rem;
 }
-#test {
+#headerContainer {
 	position: fixed;
     text-align: center;
     right: 0;
@@ -67,8 +67,7 @@
     left: 0;
     z-index: 1;
     opacity: 1;
-	padding:15px;
-	display:none;
+	padding:5px;
 }
 .nxtPrevButtons {
 	display:flex;
@@ -87,9 +86,12 @@
   /* Ensures these buttons show they're clickable */
 }
 .prevBttn {
+    flex-basis: 15px;
 	flex-grow: 0.0085;
 }
 .nextBttn {
+	
+    flex-basis: 15px;
 	flex-grow: 0.0085;
 }
 .projectImg {
@@ -135,7 +137,16 @@
     max-height: 165px;
   }
   .nxtPrevButtons {
-	  padding: 3.35rem 0 0 0;
+	  padding: 0 0 0 0;
+  }
+  .nxtPrevButtons h2 {
+	  font-size: 115%;
+  }
+  .prevBttn,
+  .nextBttn {
+	  width:60%;
+	  height:60%;
+	  font-size: 115%;
   }
   .link {
     font-size: 0.58rem;
@@ -146,7 +157,6 @@
 }
 
 /* General Tablet adjustments */
-
 @media only screen and (min-width: 40em) and (max-width: 100em) and (orientation: portrait) {
   .quoteRotator {
     width: 92.5%;

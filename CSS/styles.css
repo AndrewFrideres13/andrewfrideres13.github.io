@@ -371,11 +371,11 @@ button {
   }
   .fa-google, .fa-github-square, .fa-linkedin  {
     transform: scale(1.85, 2.05);
-    margin: 0 0 -0.064rem -6px;
+    margin: 0 0 -0.054rem -6px;
     padding-bottom: 0;
   }
   .fa-google  {
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.15rem;
   }
 }
 

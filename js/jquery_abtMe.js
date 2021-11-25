@@ -14,7 +14,7 @@
       return this.each(function() {
         var rotation; //Interval rotation
         var aboutMeElements = $(this);
-		var header = $('.test');
+		var header = $('.headerContainer');
         var list_items = aboutMeElements.find('.quoteContent');
         var rotationIsActive = true;
         var rotateSpeed = config.rotateSpeed < 2000 ? 2000 : config.rotateSpeed;
