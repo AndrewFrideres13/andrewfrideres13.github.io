@@ -141,11 +141,12 @@
   }
   .nxtPrevButtons h2 {
 	  font-size: 100%;
+	  padding: 5px 13px 0 13px;
   }
   .prevBttn,
   .nextBttn {
-	  width:60%;
-	  height:60%;
+	  width:58%;
+	  height:58%;
 	  font-size: 115%;
   }
   .link {
