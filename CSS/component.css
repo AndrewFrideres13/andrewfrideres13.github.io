@@ -59,15 +59,9 @@
   padding: 1rem 0 0 0;
   line-height: 1.5rem;
 }
-#headerContainer {
-	position: fixed;
-    text-align: center;
-    right: 0;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 1;
-	padding:5px;
+body div header {
+	width: 50%;
+	margin: 0 auto;
 }
 .nxtPrevButtons {
 	display:flex;
