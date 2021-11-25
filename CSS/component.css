@@ -78,6 +78,7 @@
 }
 .nxtPrevButtons h2 {
 	padding: 5px 15px 0 15px;
+	flex-grow: 1;
 }
 .prevBttn,
 .nextBttn {
@@ -140,13 +141,14 @@
 	  padding: 0 0 0 0;
   }
   .nxtPrevButtons h2 {
-	  font-size: 100%;
+	  font-size: 90%;
 	  padding: 5px 13px 0 13px;
+	  flex-grow: 0.35;
   }
   .prevBttn,
   .nextBttn {
-	  width:58%;
-	  height:58%;
+	  width:56%;
+	  height:56%;
 	  font-size: 115%;
   }
   .link {
@@ -155,6 +157,11 @@
   .clickable {
 	font-size: 0.825rem;
   }
+}
+@media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
+	.nxtPrevButtons h2 {
+	  flex-grow: 0.85;
+	}
 }
 
 /* General Tablet adjustments */

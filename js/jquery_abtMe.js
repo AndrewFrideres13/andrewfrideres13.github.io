@@ -66,7 +66,7 @@
           header.append( //Append to our list our Prev/Next Bttns
             '<div class="nxtPrevButtons">\
               <button class="prevBttn"> Prev </button>\
-			  <h2>About Me</h2>\
+			  <h2>       </h2>\
               <button class="nextBttn"> Next </button>\
             </div>'
           );
