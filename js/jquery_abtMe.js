@@ -14,6 +14,7 @@
       return this.each(function() {
         var rotation; //Interval rotation
         var aboutMeElements = $(this);
+		var header = $('.test');
         var list_items = aboutMeElements.find('.quoteContent');
         var rotationIsActive = true;
         var rotateSpeed = config.rotateSpeed < 2000 ? 2000 : config.rotateSpeed;
@@ -62,13 +63,14 @@
         };
         
         var addNextPrevBttns = function() {
-          aboutMeElements.append( //Append to our list our Prev/Next Bttns
+          header.append( //Append to our list our Prev/Next Bttns
             '<div class="nxtPrevButtons">\
               <button class="prevBttn"> Prev </button>\
+			  <h2>About Me</h2>\
               <button class="nextBttn"> Next </button>\
             </div>'
           );
-          aboutMeElements.find('button').click(function() { //functionality behind bttns, also clears interval to kickoff next element
+          header.find('button').click(function() { //functionality behind bttns, also clears interval to kickoff next element
             clearInterval(rotation);
             rotate_quotes( $(this).hasClass('nextBttn') ? 'forward' : 'backward' ); //Determines if we go forward or back depending on bttn press
             autoRotate();//Resume auto rotation...

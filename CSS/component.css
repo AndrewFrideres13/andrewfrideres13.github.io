@@ -7,7 +7,6 @@
   width: 100%;
   min-height: 400px;
 }
-
 .quoteRotator .quoteContent {
   min-height: 200px;
   max-height: 650px;
@@ -20,14 +19,12 @@
   opacity: 1;
   /* show the current quote */
 }
-
 .quoteRotator .quoteContent:before,
 .quoteRotator .quoteContent:after {
   content: " ";
   display: table;
   clear: both;
 }
-
 /* This is the progress bar we will see being animated from left-to-right
    via jQuery code Width is our starting value for the red bar modified by jquery
 .quoteProgress {
@@ -62,14 +59,39 @@
   padding: 1rem 0 0 0;
   line-height: 1.5rem;
 }
-
+#test {
+	position: fixed;
+    text-align: center;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+	padding:15px;
+	display:none;
+}
+.nxtPrevButtons {
+	display:flex;
+	flex: 1 1 auto;
+	flex-flow: row nowrap;
+	align-content: stretch;
+	justify-content: center;
+}
+.nxtPrevButtons h2 {
+	padding: 5px 15px 0 15px;
+}
 .prevBttn,
 .nextBttn {
   color: #ffff9a;
   cursor: pointer;
   /* Ensures these buttons show they're clickable */
 }
-
+.prevBttn {
+	flex-grow: 0.0085;
+}
+.nextBttn {
+	flex-grow: 0.0085;
+}
 .projectImg {
   float: left;
   width: 36.5%;
