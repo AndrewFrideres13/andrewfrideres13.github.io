@@ -60,7 +60,7 @@
   line-height: 1.5rem;
 }
 body div header {
-	width: 50%;
+	width: 48%;
 	margin: 0 auto;
 }
 .nxtPrevButtons {
@@ -71,8 +71,8 @@ body div header {
 	justify-content: center;
 }
 .nxtPrevButtons h2 {
-	padding: 5px 15px 0 15px;
-	flex-grow: 1;
+	opacity:0;
+	flex-grow: 1.35;
 }
 .prevBttn,
 .nextBttn {
@@ -131,12 +131,14 @@ body div header {
     width: auto;
     max-height: 165px;
   }
+  body div header {
+	width: 78%;
+  }
   .nxtPrevButtons {
 	  padding: 0 0 0 0;
   }
   .nxtPrevButtons h2 {
 	  font-size: 90%;
-	  padding: 5px 13px 0 13px;
 	  flex-grow: 0.35;
   }
   .prevBttn,
@@ -153,6 +155,9 @@ body div header {
   }
 }
 @media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
+	body div header {
+	  width: 80%;
+    }
 	.nxtPrevButtons h2 {
 	  flex-grow: 0.85;
 	}

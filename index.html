@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Portfolio maintained by Andrew Frideres,
-      have Associates in IT-Software Development from Chippewa Valley Tech. College,
+      have Associates in IT-Software Dev from Chippewa Valley Tech. College,
 	  Bachelors in CS Game Design & Dev from UW-Stout">
     <meta name="keywords" content="Andrew Frideres Software Developer Game Developer 2021 Online Portfolio">
     <link rel="preload" href="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" as="script">
@@ -38,12 +38,12 @@
                 //Starting load visible, everything else invisible
                 $startingBG.css("opacity", 0.7);
                 $abtBG.css("opacity", 0);
-                $startingBG.delay(8000).fadeTo(5000, 0, function() {
+                $startingBG.delay(7000).fadeTo(5000, 0, function() {
                     $startingBG.hide();
                     html.style.overflow = "visible";
                 });
 
-                $abtBG.delay(7500).fadeTo(5000, 1, function() {
+                $abtBG.delay(6500).fadeTo(5000, 1, function() {
                     $abtBG.show();
                     //Allow touch screen/scroll events again
                     window.removeEventListener("scroll", preventMotion, false);
@@ -109,8 +109,11 @@
               class="projectImg"
               src="./Pics/me.webp"
               alt="Picture of me (Andrew)"
+			  loading="lazy"	
+			  width="36.5%"
+			  height="100%"
             />
-            <footer>- Andrew Frideres</footer>
+            <footer>-Andrew Frideres</footer>
           </blockquote>
         </div>
 
@@ -148,6 +151,9 @@
               class="projectImg"
               src="./Pics/AIExp.webp"
               alt="Unity STEMM AI Experiment"
+			  loading="lazy"
+			  width="36.5%"	
+			  height="100%"
             />
             <footer>Unity STEMM AI Experiment </footer>
           </blockquote>
@@ -207,6 +213,9 @@
               class="projectImg"
               src="./Pics/sp.webp"
               alt="Spotlight Poster"
+			  loading="lazy"
+			  width="36.5%"
+			  height="100%"	
             />
             <footer>Spotlight</footer>
           </blockquote>
@@ -226,6 +235,9 @@
               class="projectImg"
               src="./Pics/LL.webp"
               alt="Lackluster Poster"
+			  loading="lazy"
+			  width="36.5%"	
+			  height="100%"
             />
             <footer>
               Lack Luster Download:
@@ -245,7 +257,14 @@
                 the ordeal. After wandering the island for a time, you discover an altar deep within the island dedicated to Njord, God of the Sea. Offering some of your bounty to Njord, he aids you by turning your rod into a weapon capable of surviving
                 the terrors of the night to come...
             </p>
-            <img class="projectImg" src="./Pics/fiskur.webp" alt="Spring 2020 Fiskur Poster" />
+            <img 
+			  class="projectImg" 
+			  src="./Pics/fiskur.webp" 
+			  alt="Spring 2020 Fiskur Poster"
+			  loading="lazy"	
+			  width="36.5%"		
+			  height="100%"	  
+			/>
             <footer>
                 Fiskur Download:
                 <a class="clickable" href="https://castirongames2020.gitlab.io/">https://castirongames2020</a
