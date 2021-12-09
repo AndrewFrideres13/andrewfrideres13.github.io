@@ -308,14 +308,17 @@ button {
     line-height: 13px;
   }
   /*HUD adjusts for phone size*/
+  .hud {
+	height:110%;
+  }
   #HUD {
     max-width: 57em;
     margin: 0 auto;
     position: static;
   }
   .box {
-    min-height: 60px;
-    max-height: 90px;
+    min-height: 70px;
+    max-height: 120px;
     font-size: 80%;
     overflow: hidden;
   }
