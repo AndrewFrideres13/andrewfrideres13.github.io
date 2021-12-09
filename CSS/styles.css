@@ -309,7 +309,7 @@ button {
   }
   /*HUD adjusts for phone size*/
   .hud {
-	height:110%;
+	height:115%;
   }
   #HUD {
     max-width: 57em;
