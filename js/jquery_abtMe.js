@@ -75,14 +75,14 @@
 							
 							function Click() { //functionality behind bttns, also clears interval to kickoff next element
 								clearInterval(rotation);
-								rotate_quotes($(this).hasClass('nextBttn') ? 'forward' : 'backward'); //Determines if we go forward or back depending on bttn press
 								autoRotate(); //Resume auto rotation...
 								// Adds a delay in so we do NOT get multiple clicks and prevents slide breakage
+								rotate_quotes($(this).hasClass('nextBttn') ? 'forward' : 'backward'); //if we've clicked nextBttn move forward, else we clicked prevBttn, so go back
 								setTimeout(function() {
-									header.find('button').one('click', Click);
-								}, 1800)
+									$(this).one('click', Click);
+								}, 2000)
                             }
-                            header.find('button').one('click', Click);
+                            $(this).one('click', Click);
                         };
                         if (config.prevNextButtonsEnabled) { addNextPrevBttns(); } //If T enable Prev/Next Bttns
                         if (config.pauseOnHoverEnabled) { pauseRotation(); } //If T enable rotation pause on hover
