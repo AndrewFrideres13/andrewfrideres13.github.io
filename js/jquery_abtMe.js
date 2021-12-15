@@ -34,8 +34,9 @@
                         }
 
                         var rotate_quotes = function(direction) {
+							rotationIsActive = false;
                             var active_quote = aboutMeElements.find('.quoteContent.active');
-                            var next_quote = direction === 'forward' ? get_next_quote(active_quote) : get_previous_quote(active_quote)
+                            var next_quote = direction === 'forward' ? get_next_quote(active_quote) : get_previous_quote(active_quote);
 
                             active_quote.animate({
                                 opacity: 0
@@ -43,11 +44,11 @@
                                 active_quote.hide();
                                 list_items.css('opacity', 1);
                                 next_quote.fadeIn(800);
-								rotationIsActive = false;
                             });
 
                             active_quote.removeClass('active'); //Remove current active class and set the new one to be active (Aka hide prev slide show next)
                             next_quote.addClass('active');
+							rotationIsActive = true;
                         }; //End rotate_quotes
 
                         var autoRotate = function() { //Auto rotate based off passed in interval
@@ -73,15 +74,19 @@
                                 </div>'
                             );
 							
-							function Click() { //functionality behind bttns, also clears interval to kickoff next element
-								clearInterval(rotation);
-								autoRotate(); //Resume auto rotation...
-								// Adds a delay in so we do NOT get multiple clicks and prevents slide breakage
-								rotate_quotes($(this).hasClass('nextBttn') ? 'forward' : 'backward'); //if we've clicked nextBttn move forward, else we clicked prevBttn, so go back
-								setTimeout(function() {
-									$(this).one('click', Click);
-								}, 2000)
+							function Click(e) { //functionality behind bttns, also clears interval to kickoff next element
+								if (rotationIsActive) { 
+									clearInterval(rotation);
+									autoRotate(); //Resume auto rotation...
+									// Adds a delay in so we do NOT get multiple clicks and prevents slide breakage
+									
+									rotate_quotes($(e.target).hasClass('nextBttn') ? 'forward' : 'backward'); //if we've clicked nextBttn move forward, else we clicked prevBttn, so go back
+									setTimeout(function() {
+										$(this).one('click', Click);
+									}, 2000);
+								}
                             }
+							
                             $(this).one('click', Click);
                         };
                         if (config.prevNextButtonsEnabled) { addNextPrevBttns(); } //If T enable Prev/Next Bttns
