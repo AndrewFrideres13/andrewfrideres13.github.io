@@ -18,7 +18,7 @@
                         var header = $('.headerContainer');
                         var list_items = aboutMeElements.find('.quoteContent');
                         var rotationIsActive = true;
-                        var rotateSpeed = config.rotateSpeed < 2000 ? 2000 : config.rotateSpeed;
+                        var rotateSpeed = config.rotateSpeed < 3500 ? 3500 : config.rotateSpeed;
 
                         var add_active_class = function() {
                             var active_class_not_already_applied = aboutMeElements.find('.quoteContent.active').length === 0;
@@ -43,9 +43,10 @@
                                 active_quote.hide();
                                 list_items.css('opacity', 1);
                                 next_quote.fadeIn(800);
+								rotationIsActive = false;
                             });
 
-                            active_quote.removeClass('active'); //Remove current active class and set teh net one to be active (Aka hide prev, show next)
+                            active_quote.removeClass('active'); //Remove current active class and set the new one to be active (Aka hide prev slide show next)
                             next_quote.addClass('active');
                         }; //End rotate_quotes
 
@@ -71,11 +72,17 @@
                                   <button class="nextBttn"> Next </button>\
                                 </div>'
                             );
-                            header.find('button').click(function() { //functionality behind bttns, also clears interval to kickoff next element
-                                clearInterval(rotation);
-                                rotate_quotes($(this).hasClass('nextBttn') ? 'forward' : 'backward'); //Determines if we go forward or back depending on bttn press
-                                autoRotate(); //Resume auto rotation...
-                            });
+							
+							function Click() { //functionality behind bttns, also clears interval to kickoff next element
+								clearInterval(rotation);
+								rotate_quotes($(this).hasClass('nextBttn') ? 'forward' : 'backward'); //Determines if we go forward or back depending on bttn press
+								autoRotate(); //Resume auto rotation...
+								// Adds a delay in so we do NOT get multiple clicks and prevents slide breakage
+								setTimeout(function() {
+									header.find('button').one('click', Click);
+								}, 1800)
+                            }
+                            header.find('button').one('click', Click);
                         };
                         if (config.prevNextButtonsEnabled) { addNextPrevBttns(); } //If T enable Prev/Next Bttns
                         if (config.pauseOnHoverEnabled) { pauseRotation(); } //If T enable rotation pause on hover
