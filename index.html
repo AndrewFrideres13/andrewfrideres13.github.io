@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--[if IE]>
+	<h1>Outdated Browser detected. Please try a newer browser.</h1>
+<![endif]-->
 <head>
     <title>Afrideres Portfolio</title>
     <link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -17,9 +19,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/jquery_abtMe.js" defer></script>
     <script>
-        //Reset for reloading page after scrolling on longer posts
+        // Reset for reloading page after scrolling on longer posts
         window.scrollTo(0, 0);
-        //Prevent touchscreen attributes UNTIL we fade out the cover
+        // Prevent touchscreen attributes UNTIL we fade out the cover
         window.addEventListener("scroll", preventMotion, false);
         window.addEventListener("touchmove", preventMotion, false);
 
@@ -27,15 +29,15 @@
             event.preventDefault();
             event.stopPropagation();
         }
-        //Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
+        // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
         $(function() {
             var html = document.getElementsByTagName("html")[0];
             var $startingBG = $(".startUpBG");
             var $abtBG = $(".abtBG");
 
-            //Waits a bit then triggers fade out
+            // Waits a bit then triggers fade out
             if (document.cookie == false) {
-                //Starting load visible, everything else invisible
+                // Starting load visible, everything else invisible
                 $startingBG.css("opacity", 0.7);
                 $abtBG.css("opacity", 0);
                 $startingBG.delay(7000).fadeTo(5000, 0, function() {
