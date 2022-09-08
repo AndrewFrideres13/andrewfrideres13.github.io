@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if IE]>
-	<h1>Outdated Browser detected. Please try a newer browser.</h1>
-<![endif]-->
-<![if !IE]>
 <head>
     <title>Afrideres Portfolio</title>
     <link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -69,13 +65,10 @@
             $("#quoteRotator").abtRotator();
         });
     </script>
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script
-    ><![endif]-->
 	<link rel="icon" href="./Pics/Mobile/DoomMe_ico.png">
 </head>
 
-<body>
+<body id="mainContent">
     <div class="startUpBG">
         <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
         <header>
@@ -329,6 +322,13 @@
     </script>
     <div id="HUD"></div>
   </body>
-<![endif]> 
-<!-- End if for not on IE -->
+  <script>
+	var ua = window.navigator.userAgent;
+	var isIE = /MSIE|Trident/.test(ua);
+	if (isIE) {
+		ie_html = document.getElementsByTagName("html")[0] // Grab our HTMl elem, so we can overwrite it with the following warning
+		ie_html.innerHTML = '<body><h1>Please swap to a modern browser.</h1></body>';
+		ie_html.style.textAlign = 'center'
+	}
+  </script>
 </html>
