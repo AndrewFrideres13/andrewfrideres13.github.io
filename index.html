@@ -325,7 +325,7 @@
   <script>
 	var ua = window.navigator.userAgent;
 	var isIE = /MSIE|Trident/.test(ua);
-	if (isIE) {
+	if (isIE || ua.indexOf("Edge/") > -1) {
 		ie_html = document.getElementsByTagName("html")[0] // Grab our HTMl elem, so we can overwrite it with the following warning
 		ie_html.innerHTML = '<body><h1>Please swap to a modern browser.</h1></body>';
 		ie_html.style.textAlign = 'center'
