@@ -296,7 +296,7 @@ button {
 }
 
 @media only screen and (min-width: 0em) and (max-width: 59em) {
-  .ammo {
+  .health, .ammo {
     /* Not enough screen so we just hide this in portrait mode since its just visual*/
     display: none !important;
   }
@@ -304,7 +304,7 @@ button {
 
 /*Phone Portrait*/
 @media only screen and (min-width: 0em) and (max-width: 40em) and (orientation: portrait) {
-  .health, .armor {
+  .armor {
     /* Not enough screen so we just hide this in portrait mode since its just visual*/
     display: none !important;
   }
