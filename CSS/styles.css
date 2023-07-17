@@ -138,7 +138,7 @@ body {
 }
 
 .avatar {
-  padding: 8px 4px 2px 4px !important;
+  padding: 8px 8px 2px 8px !important;
 }
 
 .armor {
@@ -214,7 +214,7 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   align-content: center;
-  min-width: 75px;
+  min-width: 90px;
   background-size: 6.5rem;
 }
 
@@ -334,6 +334,7 @@ button {
   }
   .avatar {
     padding: 8px 0 2px 0 !important;
+    min-width: 70px;
   }
   .arms {
     font-size: 85% !important;
@@ -344,9 +345,10 @@ button {
     transform: scale(0.85, 2.35);
   }
   .info {
-    font-size: 75% !important;
+    font-size: 70% !important;
+    line-height: 30px;
   }
-  button {
+  button {  
     font-size: 165%;
     padding: 2px 0.9px 2px 0.9px;
     margin: 0.5px;
@@ -362,7 +364,9 @@ button {
     /*bring img back up with negative percent*/
     margin: -15% auto;
   }
-
+  #outsideLinks{
+    margin: 2px;
+  }
   .fa-google, .fa-github-square, .fa-linkedin  {
     transform: scale(1.5);
   }
@@ -377,7 +381,7 @@ button {
     font-size: 70%;
   }
   .box:not(.lives) {
-    padding: 5px;
+    padding: 2px;
   }
   .number {
     font-size: 155%;
@@ -405,8 +409,8 @@ button {
     margin: 2.15px;
   }
   .info a {
-    font-size: 76%;
-    line-height: 200%;
+    font-size: 74%;
+    line-height: 185%;
   }
   .avatar {
     background-size: 5rem;
