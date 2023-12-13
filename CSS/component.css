@@ -81,12 +81,11 @@ body div header {
   /* Ensures these buttons show they're clickable */
 }
 .prevBttn {
-    flex-basis: 15px;
+  flex-basis: 15px;
 	flex-grow: 0.0085;
 }
 .nextBttn {
-	
-    flex-basis: 15px;
+  flex-basis: 15px;
 	flex-grow: 0.0085;
 }
 .projectImg {
@@ -132,7 +131,7 @@ body div header {
     max-height: 165px;
   }
   body div header {
-	width: 78%;
+	  width: 78%;
   }
   .nxtPrevButtons {
 	  padding: 0 0 0 0;
@@ -151,13 +150,13 @@ body div header {
     font-size: 0.58rem;
   }
   .clickable {
-	font-size: 0.825rem;
+	  font-size: 0.825rem;
   }
 }
 @media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
 	body div header {
 	  width: 80%;
-    }
+  }
 	.nxtPrevButtons h2 {
 	  flex-grow: 0.85;
 	}
