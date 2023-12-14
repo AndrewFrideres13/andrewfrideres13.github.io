@@ -334,10 +334,14 @@ button {
   }
   .avatar {
     padding: 8px 0 2px 0 !important;
-    min-width: 70px;
+    min-width: 40px;
+    max-width: 120px;
+    background-size: 9.5rem;
   }
   .arms {
     font-size: 85% !important;
+    min-width: 100px;
+    max-width: 100px;
   }
   .number {
     margin: 15px 0px 32px -0.4rem;
@@ -347,15 +351,12 @@ button {
   .info {
     font-size: 70% !important;
     line-height: 30px;
+    max-width: 190px;
   }
   button {  
     font-size: 165%;
     padding: 2px 0.9px 2px 0.9px;
     margin: 0.5px;
-  }
-  .avatar {
-    max-width: 130px;
-    background-size: 9.5rem;
   }
   .avatarTxt {
     font-size: 62.5%;

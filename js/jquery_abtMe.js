@@ -2,7 +2,7 @@
 (function($, window, undefined) { //Privatize the scope, pass in JQUERY ($) the window object (Which will be local) and explicitly state what undefined will be
     $.abtRotator = {
         defaults: {
-            rotateSpeed: 15000,
+            rotateSpeed: null,
             prevNextButtonsEnabled: true
         }
     }
@@ -14,8 +14,7 @@
                 const $proj_container = $(this);
                 const header = $('.headerContainer');
                 const list_items = $proj_container.find('.quoteContent');
-                const rotateSpeed = _config.rotateSpeed < 3500 ? 3500 : _config.rotateSpeed;
-
+                const rotateSpeed = _config.rotateSpeed ?? 15750
                 var rotationIsActive = true;
 
                 
