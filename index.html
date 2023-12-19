@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/styles.css"/>
     <link rel="stylesheet" href="CSS/component.css" defer/>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Maintained by Andrew Frideres,
       have Associates in IT-Software Dev from Chippewa Valley Tech. College,
 	  Bachelors in CS Game Design & Dev from UW-Stout">
@@ -15,8 +15,7 @@
     <link rel="preload" href="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" as="script">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/jquery_abtMe.js" defer></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-	<link rel="icon" href="./Pics/Mobile/DoomMe_ico.png">
+    <link rel="icon" href="./Pics/Mobile/DoomMe_ico.png">
 </head>
 
 <body id="mainContent">
@@ -51,7 +50,8 @@
               that includes the languages and projects I've worked on, otherwise
               I can also be contacted at the email address below.
             </p>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="andrew-frideres-231057107" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/andrew-frideres-231057107?trk=profile-badge">Andrew Frideres</a></div>
+            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+            <div class="badge-base LI-profile-badge" X-Content-Type-Options="nosniff" Content-Type="text/html" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="andrew-frideres-231057107" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/andrew-frideres-231057107?trk=profile-badge">Andrew Frideres</a></div>
             <footer>-Andrew Frideres</footer>
           </blockquote>
         </div>
@@ -283,6 +283,12 @@
         const HUD = document.getElementById("HUD");
         const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const START_BG = document.getElementsByClassName("startUpBG")[0];
+        if (document.cookie.split("doOnlyOnce=")[1] !== "true") {
+            document.cookie = "doOnlyOnce=true;";
+        } else {
+            // Helps the browser remember to hide the cookie banner if we've already been here
+            START_BG.style.display = "none";
+        }
         
         // Reset for reloading page after scrolling on longer posts
         window.scrollTo(0, 0);
