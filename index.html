@@ -1,398 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Afrideres Portfolio</title>
     <link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="CSS/styles.css"></noscript>
-    <link rel="stylesheet" href="CSS/styles.css"/>
+    <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="stylesheet" href="CSS/component.css" defer/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Maintained by Andrew Frideres,
       have Associates in IT-Software Dev from Chippewa Valley Tech. College,
-	  Bachelors in CS Game Design & Dev from UW-Stout">
+	    Bachelors in CS Game Design & Dev from UW-Stout">
     <meta name="keywords" content="Andrew Frideres Software Developer Game Developer 2021 Online Portfolio">
-    <link rel="preload" href="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" as="script">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" as="script">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/jquery_abtMe.js" defer></script>
     <link rel="icon" href="./Pics/Mobile/DoomMe_ico.png">
 </head>
 
 <body id="mainContent">
-    <div class="startUpBG">
-        <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
-        <header>
-            <h1>AFrideres Portfolio</h1>
-            <p>
-                Screenshots on website from the game DOOM II by
-                <a id="idSoftwareCredit" href="https://www.idsoftware.com">ID Software</a
-          >
-          <br />I am <b>NOT</b> affiliated with ID Software, or own DOOM.
-          <br />All credit goes to ID Software and their respective owners.
+    <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
+    <header class="startUpBG">
+        <h1>AFrideres Portfolio</h1>
+        <p>
+            Screenshots on website from the game DOOM II by
+            <a id="idSoftwareCredit" class="clickable" href="https://www.idsoftware.com">ID Software</a>
+            <br />I am <b>NOT</b> affiliated with ID Software, or own DOOM.
+            <br />All credit goes to ID Software and their respective owners.
         </p>
-      </header>
-    </div>
+    </header>
     <div class="abtBG">
-      <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
-      <header class="headerContainer"></header>
-      <main id="quoteRotator" class="quoteRotator">
-        <div class="quoteContent active">
-          <blockquote>
-            <p>
-              I love playing with all kinds of tech, from old to new.
-              I have an old school mindset and this tend to translate
-              into the work that I do. In my spare time I like to play a lot of old school
-              games, pick up a new programming languages, or start a
-              new project and just plug away at that. Link to my resume
-              <a class="clickable" href="./docs/Afrideres_Resume.pdf" download
-                >here</a
-              >
-              that includes the languages and projects I've worked on, otherwise
-              I can also be contacted at the email address below.
-            </p>
-            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-            <div class="badge-base LI-profile-badge" X-Content-Type-Options="nosniff" Content-Type="text/html" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="andrew-frideres-231057107" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/andrew-frideres-231057107?trk=profile-badge">Andrew Frideres</a></div>
-            <footer>-Andrew Frideres</footer>
-          </blockquote>
-        </div>
+        <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
+        <header class="headerContainer">
+            <div class="nxtPrevButtons">
+                <button class="prevBttn"> Prev </button>
+                <h2>Fake Element</h2>
+                <button class="nextBttn"> Next </button>
+            </div>
+        </header>
+        <main id="quoteRotator" class="quoteRotator">
+            <blockquote class="quoteContent active">
+                <p>
+                    I love playing with all kinds of tech, from old to new. I have an old school mindset and this tend to translate into the work that I do. In my spare time I like to play a lot of old school games, pick up a new programming languages, or start a new project
+                    and just plug away at that. Link to my resume
+                    <a class="clickable" href="https://www.linkedin.com/in/andrew-frideres-231057107/overlay/1635498702956/single-media-viewer/?profileId=ACoAABrhtYUB5V7B_J34GJi7nZVrxOqy7wSBhIA">here</a> that includes the languages and projects I've worked
+                    on, otherwise I can also be contacted at the email address below.
+                </p>
+                <picture>
+                    <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/DoomMe.webp">
+                    <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/DoomMe.webp">
+                    <img class="projectImg" src="./Pics/DoomMe.webp" alt="Picture of Andrew Frideres" loading="lazy" />
+                </picture>
+                <footer>-Andrew Frideres</footer>
+            </blockquote>
 
-        <div class="quoteContent">
-          <blockquote>
-            <p>
-              My role in the group was to combine, test, and ensure we had a
-              deliverable to show off every week. I also had to be able to sit
-              town with team members and have them talk about their additions so
-              that we could log it, and assist in any debugging and merging
-              since that fell into my job role.This was my Capstone project at
-              CVTC and my test for everything I had learned.
-            </p>
-			<video
-			  class="projectImg"
-			  muted
-			  preload="metadata"
-			  autoplay
-			  loop
-			>
-				<script>
-					if (localStorage.mobile = "mobile") {
-						document.currentScript.parentNode.innerHTML += '<source src="./Pics/Mobile/mf_Pong.webm">'
-					} else {
-						document.currentScript.parentNode.innerHTML += '<source src="./Pics/Pong.webm">'
-					}
-				</script>
-			</video>
-            <footer>Multiplayer Pong</footer>
-          </blockquote>
-        </div>
-        <div class="quoteContent">
-          <blockquote>
-            <p>
-              Done as part of UW-Stout's 2020 STEMM expo as an experiment with Unity's
-			  AI, to see what could be achieved that would run sufficiently on low end 
-			  hardware. The main goal was to achieve high volume groups, that would
-			  dynamically chase a target, while avoiding, moving around, and adapting
-			  to the environment around them.
-            </p>
-            <picture>
-			  <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/AIExp.webp">
-			  <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_AIExp.webp">
-			  <img 
-			    class="projectImg" 
-			    src="./Pics/AIExp.webp" 
-			    alt="Unity AI Experiment"
-			    loading="lazy"	
-			    width="36.5%"		
-			    height="100%"	  
-			  />
-			</picture> 
-            <footer>Unity STEMM AI Experiment </footer>
-          </blockquote>
-        </div>
-        <div class="quoteContent">
-          <blockquote>
-            <p>
-              A program i made using Visual Studio (2015 initially, updated to
-              2017), it uses a GUI to allow the user to add, remove, and edit
-              games connected to a mySQL Database and then upon execution does a
-              sort of "spin" to run through all the games and select one,
-              complete with fun sound effects!
-            </p>
-			<video
-			  class="projectImg"
-              src="./Pics/gg.webm"
-			  muted
-			  preload="metadata"
-			  autoplay
-			  loop
-			></video>
-            <footer>Game Selector</footer>
-          </blockquote>
-        </div>
-        <div class="quoteContent">
-          <blockquote>
-            <p>
-              A game I created using Swift 2.0, it's more or less a clone of the
-              classic Asteroids game from way back in the day. It is developed
-              to scale gracefully depending on the size of the phone, and has
-              states for playing, power ups, and game over conditions.
-            </p>
-			<video
-			  class="projectImg"
-              src="./Pics/spShoot.webm"
-			  muted
-			  preload="metadata"
-			  autoplay
-			  loop
-			></video>
-            <footer>Space Shooter</footer>
-          </blockquote>
-        </div>
-        <div class="quoteContent">
-          <blockquote>
-            <p>
-              My first time using Unity, this is a 2D sidescroller game built
-              for touchscreen Android devices, made with Haley Peterson (artist)
-              at UW-Stout for my GDD 200 class 2019. In this game you play as a
-              little ghost boy in their quest to restore color to the bleak
-              world, with a unique mechanic of using an Android devices built in
-              gyroscope to control where the flashlight you use aims, using it
-              to cut through the dark and expose the world of color below to
-              solve puzzles & progress.
-            </p>
-            <picture>
-			  <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/sp.webp">
-			  <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_sp.webp">
-			  <img 
-			    class="projectImg" 
-			    src="./Pics/sp.webp" 
-			    alt="Spotlight Poster"
-			    loading="lazy"	
-			    width="36.5%"		
-			    height="100%"	  
-			  />
-			</picture> 
-            <footer>Spotlight</footer>
-          </blockquote>
-        </div>
-        <div class="quoteContent">
-          <blockquote>
-            <p>
-              Made at Stout in my GDD 325 class 2019, with Collin Diekvoss
-              (Programmer), Lex Klusman (Artist), and Joshua Haakana (Artist) in
-              Lackluster your goal is to activate all the orbs in order to
-              restore the light to the world. The game was made using Phaser
-              3.0, and made use of an npm server on the back end, the ultimate
-              goal was to make a fun, easy to play game for the Madison
-              Children's Museum to put on as an interactive exhibit.
-            </p>
-            <picture>
-			  <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/LL.webp">
-			  <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_LL.webp">
-			  <img 
-			    class="projectImg" 
-			    src="./Pics/LL.webp" 
-			    alt="LackLuster Poster"
-			    loading="lazy"	
-			    width="36.5%"		
-			    height="100%"	  
-			  />
-			</picture> 
-            <footer>
-              Lack Luster Download:
-              <a
-                class="clickable"
-                href="./games/LackLuster.7z"
-              >
-                Lack Luster
-              </a>
+            <blockquote class="quoteContent">
+                <p>
+                    My role in the group was to combine, test, and ensure we had a deliverable to show off every week. I also had to be able to sit town with team members and have them talk about their additions so that we could log it, and assist in any debugging and merging
+                    since that fell into my job role.This was my Capstone project at CVTC and my test for everything I had learned.
+                </p>
+                <video class="projectImg" muted preload="metadata" autoplay loop>
+                      <script>
+                        if (localStorage.mobile = "mobile") {
+                          document.currentScript.parentNode.innerHTML += '<source src="./Pics/Mobile/mf_Pong.webm">'
+                        } else {
+                          document.currentScript.parentNode.innerHTML += '<source src="./Pics/Pong.webm">'
+                        }
+                      </script>
+                    </video>
+                <footer>Multiplayer Pong</footer>
+            </blockquote>
+            <blockquote class="quoteContent">
+                <p>
+                    Done as part of UW-Stout's 2020 STEMM expo as an experiment with Unity's AI, to see what could be achieved that would run sufficiently on low end hardware. The main goal was to achieve high volume groups, that would dynamically chase a target, while avoiding,
+                    moving around, and adapting to the environment around them.
+                </p>
+                <picture>
+                    <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/AIExp.webp">
+                    <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_AIExp.webp">
+                    <img class="projectImg" src="./Pics/AIExp.webp" alt="Unity AI Experiment" loading="lazy" width="36.5%" height="100%" />
+                </picture>
+                <footer>Unity STEMM AI Experiment </footer>
+            </blockquote>
+            <blockquote class="quoteContent">
+                <p>
+                    A program i made using Visual Studio (2015 initially, updated to 2017), it uses a GUI to allow the user to add, remove, and edit games connected to a mySQL Database and then upon execution does a sort of "spin" to run through all the games and select
+                    one, complete with fun sound effects!
+                </p>
+                <video class="projectImg" src="./Pics/gg.webm" muted preload="metadata" autoplay loop></video>
+                <footer>Game Selector</footer>
+            </blockquote>
+            <blockquote class="quoteContent">
+                <p>
+                    A game I created using Swift 2.0, it's more or less a clone of the classic Asteroids game from way back in the day. It is developed to scale gracefully depending on the size of the phone, and has states for playing, power ups, and game over conditions.
+                </p>
+                <video class="projectImg" src="./Pics/spShoot.webm" muted preload="metadata" autoplay loop></video>
+                <footer>Space Shooter</footer>
+            </blockquote>
+            <blockquote class="quoteContent">
+                <p>
+                    My first time using Unity, this is a 2D sidescroller game built for touchscreen Android devices, made with Haley Peterson (artist) at UW-Stout for my GDD 200 class 2019. In this game you play as a little ghost boy in their quest to restore color to the
+                    bleak world, with a unique mechanic of using an Android devices built in gyroscope to control where the flashlight you use aims, using it to cut through the dark and expose the world of color below to solve puzzles & progress.
+                </p>
+                <picture>
+                    <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/sp.webp">
+                    <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_sp.webp">
+                    <img class="projectImg" src="./Pics/sp.webp" alt="Spotlight Poster" loading="lazy" width="36.5%" height="100%" />
+                </picture>
+                <footer>Spotlight</footer>
+            </blockquote>
+            <blockquote class="quoteContent">
+                <p>
+                    Made at Stout in my GDD 325 class 2019, with Collin Diekvoss (Programmer), Lex Klusman (Artist), and Joshua Haakana (Artist) in Lackluster your goal is to activate all the orbs in order to restore the light to the world. The game was made using Phaser
+                    3.0, and made use of an npm server on the back end, the ultimate goal was to make a fun, easy to play game for the Madison Children's Museum to put on as an interactive exhibit.
+                </p>
+                <picture>
+                    <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/LL.webp">
+                    <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_LL.webp">
+                    <img class="projectImg" src="./Pics/LL.webp" alt="LackLuster Poster" loading="lazy" width="36.5%" height="100%" />
+                </picture>
+                <footer>
+                    Lack Luster Download:
+                    <a class="clickable" href="./games/LackLuster.7z">
+                          Lack Luster
+                        </a>
                 </footer>
-                </blockquote>
-    </div>
-    <div class="quoteContent">
-        <blockquote>
-            <p>
-                Part of my 450 GDD Capstone Fall 2019-Spring 2020, a 3D action adventure game made in Unity, You play as a shipwrecked Viking who has crashed on an island within the arctic. Fitted with only your fishing rod, you set out to catch fish in order to survive
-                the ordeal. After wandering the island for a time, you discover an altar deep within the island dedicated to Njord, God of the Sea. Offering some of your bounty to Njord, he aids you by turning your rod into a weapon capable of surviving
-                the terrors of the night to come...
-            </p>
-			<picture>
-			  <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/fiskur.webp">
-			  <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_fiskur.webp">
-			  <img 
-			    class="projectImg" 
-			    src="./Pics/fiskur.webp" 
-			    alt="Spring 2020 Fiskur Poster"
-			    loading="lazy"	
-			    width="36.5%"		
-			    height="100%"	  
-			  />
-			</picture> 
-            <footer>
-                Fiskur Download:
-                <a class="clickable" href="https://castirongames2020.gitlab.io/">https://castirongames2020</a
-              >
-            </footer>
-          </blockquote>
-        </div>
-      </main>
-      <!-- End rotator -->
+            </blockquote>
+            <blockquote class="quoteContent">
+                <p>
+                    Part of my 450 GDD Capstone Fall 2019-Spring 2020, a 3D action adventure game made in Unity, You play as a shipwrecked Viking who has crashed on an island within the arctic. Fitted with only your fishing rod, you set out to catch fish in order to survive
+                    the ordeal. After wandering the island for a time, you discover an altar deep within the island dedicated to Njord, God of the Sea. Offering some of your bounty to Njord, he aids you by turning your rod into a weapon capable of surviving
+                    the terrors of the night to come...
+                </p>
+                <picture>
+                    <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/fiskur.webp">
+                    <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_fiskur.webp">
+                    <img class="projectImg" src="./Pics/fiskur.webp" alt="Spring 2020 Fiskur Poster" loading="lazy" width="36.5%" height="100%" />
+                </picture>
+                <footer>
+                    Fiskur Download:
+                    <a class="clickable" href="https://castirongames2020.gitlab.io/">https://castirongames2020</a>
+                </footer>
+            </blockquote>
+        </main>
+        <!-- End rotator -->
     </div>
     <!-- Seperated out the awesome footer for readability -->
     <footer id="HUD">
-      <!-- Our True Hud without the extra bits on the side -->
-      <div class="hud">
-          <div class="ammo box">
-              <div class="number">25</div>
-              <span>Ammo</span>
-          </div>
-          <div class="health box">
-              <div class="number">100%</div>
-              <span>Health</span>
-          </div>
-          <div class="arms box">
-              <div class="numberpad">
-                  <button>2</button><button>3</button><button>4</button><br/><button>5</button><button>6</button><button>7</button>
-              </div>
-              <span>Arms</span>
-          </div>
-          <div class="avatar box tooltip">
-              <div class="avatarTxt">Frideres</div>
-          </div>
-          <div class="armor box">
-              <div class="number">200%</div>
-              <span>Armor</span>
-          </div>
-          <!-- Links to LI, Github, Email-->
-          <div class="lives box">
-              <div id="outsideLinks">
-                  <a href="https://www.linkedin.com/in/andrew-frideres-231057107"><i class="fab fa-linkedin"></i></a>
-              </div>
-              <div id="outsideLinks">
-                  <a href="https://github.com/AndrewFrideres13"><i class="fab fa-github-square"></i></a>
-              </div>
-              <div id="outsideLinks">
-                  <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><i class="fab fa-google"></i></a>
-              </div>
-          </div>
-          <div class="info box"><a>TopSkills:JS/C#/PY&nbsp;&nbsp;</a><a>Engines:Unity/Unreal</a><a>Other:Java/VB/C++&nbsp;&nbsp;&nbsp;</a><a>DB:PHP/MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
-      </div>
-      <!-- End of our container for the DOOM Hud -->
-      <script>
-        const ABOUT_BG = document.getElementsByClassName("abtBG")[0];
-        const HTML_ELEM = document.getElementsByTagName("html")[0];
-        const HUD = document.getElementById("HUD");
-        const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        const START_BG = document.getElementsByClassName("startUpBG")[0];
-        if (document.cookie.split("doOnlyOnce=")[1] !== "true") {
-            document.cookie = "doOnlyOnce=true;";
-        } else {
-            // Helps the browser remember to hide the cookie banner if we've already been here
-            START_BG.style.display = "none";
-        }
-        
-        // Reset for reloading page after scrolling on longer posts
-        window.scrollTo(0, 0);
-        // Prevent touchscreen attributes UNTIL we fade out the cover
-        window.addEventListener("scroll", preventMotion, false);
-        window.addEventListener("touchmove", preventMotion, false);
+        <!-- Our True Hud without the extra bits on the side -->
+        <div class="hud">
+            <div class="ammo box">
+                <div class="number">25</div>
+                <span>Ammo</span>
+            </div>
+            <div class="health box">
+                <div class="number">100%</div>
+                <span>Health</span>
+            </div>
+            <div class="arms box">
+                <div class="numberpad">
+                    <button>2</button><button>3</button><button>4</button><br/><button>5</button><button>6</button><button>7</button>
+                </div>
+                <span>Arms</span>
+            </div>
+            <div class="avatar box tooltip">
+                <div class="avatarTxt">Frideres</div>
+            </div>
+            <div class="armor box">
+                <div class="number">200%</div>
+                <span>Armor</span>
+            </div>
+            <!-- Links to LI, Github, Email-->
+            <div class="lives box">
+                <div class="outsideLinks">
+                    <a href="https://www.linkedin.com/in/andrew-frideres-231057107"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="outsideLinks">
+                    <a href="https://github.com/AndrewFrideres13"><i class="fab fa-github-square"></i></a>
+                </div>
+                <div class="outsideLinks">
+                    <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+            <div class="info box"><a>TopSkills:JS/C#/PY&nbsp;&nbsp;</a><a>Cloud:Azure/OCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a>Engines:Unity/Unreal</a><a>DB:PHP/MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+        </div>
+        <!-- End of our container for the DOOM Hud -->
+        <script>
+            const ABOUT_BG = document.getElementsByClassName("abtBG")[0];
+            const HTML_ELEM = document.getElementsByTagName("html")[0];
+            const HUD = document.getElementById("HUD");
+            const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const START_BG = document.getElementsByClassName("startUpBG")[0];
+            if (document.cookie.split("doOnlyOnce=")[1] !== "true") {
+                document.cookie = "doOnlyOnce=true;SameSite=Strict;";
+            } else {
+                // Helps the browser remember to hide the cookie banner if we've already been here
+                START_BG.style.display = "none";
+            }
 
-        function preventMotion(event) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
-        $(function() {
-            let $start_bg = $(START_BG);
-            let $about_bg = $(ABOUT_BG);
-            // Waits a bit then triggers fade out
-            if (document.cookie == false) {
-                // Starting load visible, everything else invisible
-                $start_bg.css("opacity", 0.7);
-                $about_bg.css("opacity", 0);
-                $start_bg.delay(7000).fadeTo(5000, 0, function() {
-                  $start_bg.hide();
+            // Reset for reloading page after scrolling on longer posts
+            window.scrollTo(0, 0);
+            // Prevent touchscreen attributes UNTIL we fade out the cover
+            window.addEventListener("scroll", preventMotion, false);
+            window.addEventListener("touchmove", preventMotion, false);
+
+            function preventMotion(event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
+            $(function() {
+                let $start_bg = $(START_BG);
+                let $about_bg = $(ABOUT_BG);
+                // Waits a bit then triggers fade out
+                if (document.cookie == false) {
+                    // Starting load visible, everything else invisible
+                    $start_bg.css("opacity", 0.7);
+                    $about_bg.css("opacity", 0);
+                    $start_bg.delay(7000).fadeTo(5000, 0, function() {
+                        $start_bg.hide();
+                        HTML_ELEM.style.overflow = "visible";
+                    });
+
+                    $about_bg.delay(6500).fadeTo(5000, 1, function() {
+                        $about_bg.show();
+                        //Allow touch screen/scroll events again
+                        window.removeEventListener("scroll", preventMotion, false);
+                        window.removeEventListener("touchmove", preventMotion, false);
+                    });
+                } else {
+                    //Starting load invisible, everything else visible
+                    $start_bg.css("opacity", 0);
+                    $about_bg.css("opacity", 0.7);
+
+                    $start_bg.hide();
                     HTML_ELEM.style.overflow = "visible";
-                });
-
-                $about_bg.delay(6500).fadeTo(5000, 1, function() {
                     $about_bg.show();
                     //Allow touch screen/scroll events again
                     window.removeEventListener("scroll", preventMotion, false);
                     window.removeEventListener("touchmove", preventMotion, false);
-                });
-            } else {
-                //Starting load invisible, everything else visible
-                $start_bg.css("opacity", 0);
-                $about_bg.css("opacity", 0.7);
+                }
 
-                $start_bg.hide();
-                HTML_ELEM.style.overflow = "visible";
-                $about_bg.show();
-                //Allow touch screen/scroll events again
-                window.removeEventListener("scroll", preventMotion, false);
-                window.removeEventListener("touchmove", preventMotion, false);
+                //Controls our project show list
+                $("#quoteRotator").abtRotator();
+            });
+
+            ABOUT_BG.style.width = "${SCRN_W}px";
+            START_BG.style.width = "${SCRN_W}px";
+
+            function refresh() {
+                if ($(window).width() != SCRN_W) {
+                    document.cookie = "doOnlyOnce=true";
+                    location.reload();
+                }
             }
+            window.addEventListener("resize", refresh);
+            // Need to change this to on window changed, so it fires more often, fix width?
+            function scaleAvatar() {
+                let avatar = document.getElementsByClassName("avatar")[0];
+                let posInfo = avatar.getBoundingClientRect();
 
-            //Controls our project show list
-            $("#quoteRotator").abtRotator();
-        });
+                let storedX = posInfo.width - 40;
+                if (SCRN_W < 960) {
+                    storedX = posInfo.width - 50;
+                }
+                storedX = Math.max(storedX, 200);
 
-        ABOUT_BG.style.width = "${SCRN_W}px";
-        START_BG.style.width = "${SCRN_W}px";
-
-        function refresh() {
-          if ($(window).width() != SCRN_W) {
-            document.cookie = "skippable=true";
-            location.reload();
-          }
-        }
-        window.addEventListener("resize", refresh);
-        // Need to change this to on window changed, so it fires more often, fix width?
-        function scaleAvatar() {
-          var avatar = document.getElementsByClassName("avatar")[0];
-          var posInfo = avatar.getBoundingClientRect();
-          
-          var storedX = posInfo.width - 40;
-          if (SCRN_W < 960) {
-            storedX = posInfo.width - 50;
-          }
-          storedX = Math.max(storedX, 200);
-
-          let storedY = posInfo.height - 15;
-          // Adjust to ensure our HUD always matches up
-          HUD.style.width = "${window.innerWidth}px";
-          avatar.style.backgroundSize = "${storedX}px ${storedY}px";
-        }
-        scaleAvatar();
-        window.addEventListener("resize", scaleAvatar);
-
-        // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
-        $(function () {
-            let $hud = $(HUD)
-            // Waits a bit then triggers fade out
-            if (document.cookie == false) {
-              // Starting load visible, everything else invisible
-              $hud.css("opacity", 0);
-              $hud.delay(7500).fadeTo(5000, 1, function () {
-                $hud.show();
-              });
-            } else {
-              $hud.css("opacity", 1);
-              $hud.show();
+                let storedY = posInfo.height - 15;
+                // Adjust to ensure our HUD always matches up
+                HUD.style.width = "${window.innerWidth}px";
+                avatar.style.backgroundSize = "${storedX}px ${storedY}px";
             }
-        });
-      </script>
-      <script defer src="js/fa/brands.min.js"></script>
-      <script defer src="js/fa/fontawesome.min.js"></script>
-  </footer>
-  <!-- End footer here -->
-  </body>
-  <script>
-    var ua = window.navigator.userAgent;
-    var isIE = /MSIE|Trident/.test(ua);
+            scaleAvatar();
+            window.addEventListener("resize", scaleAvatar);
+
+            // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
+            $(function() {
+                let $hud = $(HUD)
+                    // Waits a bit then triggers fade out
+                if (document.cookie == false) {
+                    // Starting load visible, everything else invisible
+                    $hud.css("opacity", 0);
+                    $hud.delay(7500).fadeTo(5000, 1, function() {
+                        $hud.show();
+                    });
+                } else {
+                    $hud.css("opacity", 1);
+                    $hud.show();
+                }
+            });
+        </script>
+        <script defer src="js/fa/brands.min.js"></script>
+        <script defer src="js/fa/fontawesome.min.js"></script>
+    </footer>
+    <!-- End footer here -->
+</body>
+<script>
+    const ua = window.navigator.userAgent;
+    const isIE = /MSIE|Trident/.test(ua);
     if (isIE || ua.indexOf("Edge/") > -1) {
-      HTML_ELEM.innerHTML = '<body><h1>Please swap to a modern browser.</h1></body>';
-      HTML_ELEM.style.textAlign = 'center'
+        HTML_ELEM.innerHTML = '<body><h1>Please swap to a modern browser.</h1></body>';
+        HTML_ELEM.style.textAlign = 'center'
     }
-  </script>
+</script>
+
 </html>
