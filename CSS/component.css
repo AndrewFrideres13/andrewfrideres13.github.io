@@ -1,30 +1,34 @@
 .quoteRotator {
-  position: relative;
-  /* positioning parent */
-  margin: 0.7rem auto 6.8rem auto;
-  /* center with varying top and bottom margins */
-  max-width: 1050px;
-  width: 100%;
-  min-height: 400px;
+    position: relative;
+    /* positioning parent */
+    margin: 0.7rem auto 6.8rem auto;
+    /* center with varying top and bottom margins */
+    max-width: 1050px;
+    width: 100%;
+    min-height: 400px;
 }
+
 .quoteRotator .quoteContent {
-  min-height: 200px;
-  max-height: 650px;
-  border-top: 1px solid #bd0102;
-  padding: 0.3em 0;
-  width: 100%;
-  position: relative;
-  z-index: 100;
-  pointer-events: auto;
-  opacity: 1;
-  /* show the current quote */
+    min-height: 200px;
+    max-height: 650px;
+    border-top: 1px solid #bd0102;
+    padding: 0.3em 0;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    opacity: 1;
+    /* show the current quote */
 }
+
 .quoteRotator .quoteContent:before,
 .quoteRotator .quoteContent:after {
-  content: " ";
-  display: table;
-  clear: both;
+    content: " ";
+    display: table;
+    clear: both;
 }
+
+
 /* This is the progress bar we will see being animated from left-to-right
    via jQuery code Width is our starting value for the red bar modified by jquery
 .quoteProgress {
@@ -38,134 +42,148 @@
 }*/
 
 .quoteRotator blockquote {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
 }
 
 .quoteRotator blockquote p {
-  float: left;
-  font-size: 1em;
-  margin: 0.2em 0 1em;
-  width: 60%;
-  line-height: 1.5rem;
-  text-align: justify;
+    float: left;
+    font-size: 1em;
+    margin: 0.2em 0 1em;
+    width: 60%;
+    line-height: 1.5rem;
+    text-align: justify;
 }
 
 .quoteRotator blockquote footer {
-  font-size: 1.3em;
-  clear: both;
-  padding: 1rem 0 0 0;
-  line-height: 1.5rem;
+    font-size: 1.3em;
+    clear: both;
+    padding: 1rem 0 0 0;
+    line-height: 1.5rem;
 }
+
 body div header {
-	width: 48%;
-	margin: 0 auto;
+    width: 48%;
+    margin: 0 auto;
 }
+
 .nxtPrevButtons {
-	display:flex;
-	flex: 1 1 auto;
-	flex-flow: row nowrap;
-	align-content: stretch;
-	justify-content: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    justify-content: center;
 }
+
 .nxtPrevButtons h2 {
-	opacity:0;
-	flex-grow: 1.35;
+    opacity: 0;
+    flex-grow: 1.35;
 }
+
 .prevBttn,
 .nextBttn {
-  color: #ffff9a;
-  cursor: pointer;
-  /* Ensures these buttons show they're clickable */
+    color: #ffff9a;
+    cursor: pointer;
+    /* Ensures these buttons show they're clickable */
 }
+
 .prevBttn {
-  flex-basis: 15px;
-	flex-grow: 0.0085;
+    flex-basis: 15px;
+    flex-grow: 0.0085;
 }
+
 .nextBttn {
-  flex-basis: 15px;
-	flex-grow: 0.0085;
+    flex-basis: 15px;
+    flex-grow: 0.0085;
 }
+
 .projectImg {
-  float: left;
-  width: 36.5%;
-  padding-left: 15px;
+    float: left;
+    width: 34.5%;
+    padding-left: 15px;
+}
+
+.me {
+    width: 20%;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .prevBttn:hover,
-  .nextBttn:hover {
-    border-color: #262626 #727274 #727274 #262626;
-  }
+    .prevBttn:hover,
+    .nextBttn:hover {
+        border-color: #262626 #727274 #727274 #262626;
+    }
 }
 
 @media only screen and (min-width: 0em) and (max-width: 60em) and (orientation: landscape) {
-  /*Phone Landscape size*/
-  .quoteRotator {
-    width: 90%;
-    margin: 0.7rem auto 3.8rem auto;
-    /* center with varying top and bottom margins */
-    min-height: 200px;
-  }
-  .quoteRotator .quoteContent footer {
-    clear: both;
-    width: 100%;
-  }
+    /*Phone Landscape size*/
+    .quoteRotator {
+        width: 90%;
+        margin: 0.7rem auto 3.8rem auto;
+        /* center with varying top and bottom margins */
+        min-height: 200px;
+    }
+    .quoteRotator .quoteContent footer {
+        clear: both;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 0em) and (max-width: 40em) and (orientation: portrait) {
-  /* Phone Portrait*/
-  .quoteRotator {
-    font-size: 60%;
-    width: 85%;
-  }
-  .quoteRotator .quoteContent p {
-    float: none;
-    width: 100%;
-  }
-  .projectImg {
-    float: none;
-    width: auto;
-    max-height: 165px;
-  }
-  body div header {
-	  width: 78%;
-  }
-  .nxtPrevButtons {
-	  padding: 0 0 0 0;
-  }
-  .nxtPrevButtons h2 {
-	  font-size: 90%;
-	  flex-grow: 0.35;
-  }
-  .prevBttn,
-  .nextBttn {
-	  width:56%;
-	  height:56%;
-	  font-size: 115%;
-  }
-  .link {
-    font-size: 0.58rem;
-  }
-  .clickable {
-	  font-size: 0.825rem;
-  }
-}
-@media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
-	body div header {
-	  width: 80%;
-  }
-	.nxtPrevButtons h2 {
-	  flex-grow: 0.85;
-	}
+    /* Phone Portrait*/
+    .quoteRotator {
+        font-size: 60%;
+        width: 85%;
+    }
+    .quoteRotator .quoteContent p {
+        float: none;
+        width: 100%;
+    }
+    .projectImg {
+        float: none;
+        width: auto;
+        max-height: 165px;
+    }
+    body div header {
+        width: 78%;
+    }
+    .nxtPrevButtons {
+        padding: 0 0 0 0;
+    }
+    .nxtPrevButtons h2 {
+        font-size: 90%;
+        flex-grow: 0.35;
+    }
+    .prevBttn,
+    .nextBttn {
+        width: 56%;
+        height: 56%;
+        font-size: 115%;
+    }
+    .link {
+        font-size: 0.58rem;
+    }
+    .clickable {
+        font-size: 0.825rem;
+    }
 }
 
+@media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
+    body div header {
+        width: 80%;
+    }
+    .nxtPrevButtons h2 {
+        flex-grow: 0.85;
+    }
+}
+
+
 /* General Tablet adjustments */
+
 @media only screen and (min-width: 40em) and (max-width: 100em) and (orientation: portrait) {
-  .quoteRotator {
-    width: 92.5%;
-    line-height: 1.75rem;
-  }
+    .quoteRotator {
+        width: 92.5%;
+        line-height: 1.75rem;
+    }
 }

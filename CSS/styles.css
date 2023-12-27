@@ -320,7 +320,7 @@ button {
         padding-bottom: 10rem;
     }
     .lives {
-        flex-basis: 38.5px;
+        flex-basis: 42.5px;
     }
     .aboutText {
         line-height: 13px;
@@ -344,7 +344,7 @@ button {
         padding: 8px 0 2px 0 !important;
         min-width: 40px;
         max-width: 120px;
-        background-size: 9.5rem;
+        background-size: contain;
     }
     .arms {
         display: none !important;

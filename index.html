@@ -50,7 +50,7 @@
                 <picture>
                     <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/DoomMe.webp">
                     <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/DoomMe.webp">
-                    <img class="projectImg" src="./Pics/DoomMe.webp" alt="Picture of Andrew Frideres" loading="lazy" />
+                    <img class="projectImg me" src="./Pics/DoomMe.webp" alt="Picture of Andrew Frideres" loading="lazy" />
                 </picture>
                 <footer>-Andrew Frideres</footer>
             </blockquote>
@@ -61,14 +61,14 @@
                     since that fell into my job role.This was my Capstone project at CVTC and my test for everything I had learned.
                 </p>
                 <video class="projectImg" muted preload="metadata" autoplay loop>
-                      <script>
-                        if (localStorage.mobile = "mobile") {
-                          document.currentScript.parentNode.innerHTML += '<source src="./Pics/Mobile/mf_Pong.webm">'
-                        } else {
-                          document.currentScript.parentNode.innerHTML += '<source src="./Pics/Pong.webm">'
-                        }
-                      </script>
-                    </video>
+                    <script>
+                      if (localStorage.mobile = "mobile") {
+                        document.currentScript.parentNode.innerHTML += '<source src="./Pics/Mobile/mf_Pong.webm">'
+                      } else {
+                        document.currentScript.parentNode.innerHTML += '<source src="./Pics/Pong.webm">'
+                      }
+                    </script>
+                </video>
                 <footer>Multiplayer Pong</footer>
             </blockquote>
             <blockquote class="quoteContent">
@@ -79,7 +79,7 @@
                 <picture>
                     <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/AIExp.webp">
                     <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_AIExp.webp">
-                    <img class="projectImg" src="./Pics/AIExp.webp" alt="Unity AI Experiment" loading="lazy" width="36.5%" height="100%" />
+                    <img class="projectImg" src="./Pics/AIExp.webp" alt="Unity AI Experiment" loading="lazy" />
                 </picture>
                 <footer>Unity STEMM AI Experiment </footer>
             </blockquote>
@@ -106,7 +106,7 @@
                 <picture>
                     <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/sp.webp">
                     <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_sp.webp">
-                    <img class="projectImg" src="./Pics/sp.webp" alt="Spotlight Poster" loading="lazy" width="36.5%" height="100%" />
+                    <img class="projectImg" src="./Pics/sp.webp" alt="Spotlight Poster" loading="lazy" />
                 </picture>
                 <footer>Spotlight</footer>
             </blockquote>
@@ -118,7 +118,7 @@
                 <picture>
                     <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/LL.webp">
                     <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_LL.webp">
-                    <img class="projectImg" src="./Pics/LL.webp" alt="LackLuster Poster" loading="lazy" width="36.5%" height="100%" />
+                    <img class="projectImg" src="./Pics/LL.webp" alt="LackLuster Poster" loading="lazy" />
                 </picture>
                 <footer>
                     Lack Luster Download:
@@ -136,7 +136,7 @@
                 <picture>
                     <source media="not(only screen and (min-width: 0em) and (max-width: 40em))" srcset="./Pics/fiskur.webp">
                     <source media="only screen and (min-width: 0em) and (max-width: 40em)" srcset="./Pics/Mobile/mf_fiskur.webp">
-                    <img class="projectImg" src="./Pics/fiskur.webp" alt="Spring 2020 Fiskur Poster" loading="lazy" width="36.5%" height="100%" />
+                    <img class="projectImg" src="./Pics/fiskur.webp" alt="Spring 2020 Fiskur Poster" loading="lazy" />
                 </picture>
                 <footer>
                     Fiskur Download:
@@ -192,8 +192,9 @@
             const HUD = document.getElementById("HUD");
             const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             const START_BG = document.getElementsByClassName("startUpBG")[0];
-            if (document.cookie.split("doOnlyOnce=")[1] !== "true") {
-                document.cookie = "doOnlyOnce=true;SameSite=Strict;";
+            const VISITED_SITE_RECENTLY = document.cookie.split("doOnlyOnce=")[1]
+            if (VISITED_SITE_RECENTLY !== "true") {
+                document.cookie = "doOnlyOnce=true;";
             } else {
                 // Helps the browser remember to hide the cookie banner if we've already been here
                 START_BG.style.display = "none";
@@ -214,7 +215,7 @@
                 let $start_bg = $(START_BG);
                 let $about_bg = $(ABOUT_BG);
                 // Waits a bit then triggers fade out
-                if (document.cookie == false) {
+                if (VISITED_SITE_RECENTLY === undefined) {
                     // Starting load visible, everything else invisible
                     $start_bg.css("opacity", 0.7);
                     $about_bg.css("opacity", 0);
@@ -251,7 +252,7 @@
 
             function refresh() {
                 if ($(window).width() != SCRN_W) {
-                    document.cookie = "doOnlyOnce=true";
+                    // document.cookie = "doOnlyOnce=true;";
                     location.reload();
                 }
             }
@@ -277,9 +278,9 @@
 
             // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
             $(function() {
-                let $hud = $(HUD)
-                    // Waits a bit then triggers fade out
-                if (document.cookie == false) {
+                let $hud = $(HUD);
+                // Waits a bit then triggers fade out
+                if (VISITED_SITE_RECENTLY === undefined) {
                     // Starting load visible, everything else invisible
                     $hud.css("opacity", 0);
                     $hud.delay(7500).fadeTo(5000, 1, function() {
