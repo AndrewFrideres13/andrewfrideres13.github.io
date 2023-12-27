@@ -153,9 +153,9 @@ body {
 */
 
 
-/* Our container for our HUD element, followed by the actual HUD itself */
+/* Our container for our HUD*/
 
-#HUD {
+.hud {
     position: fixed;
     text-align: center;
     right: 0;
@@ -163,10 +163,6 @@ body {
     left: 0;
     z-index: 1;
     opacity: 1;
-    display: none;
-}
-
-.hud {
     display: flex;
     flex: 1 1 auto;
     flex-flow: row nowrap;
@@ -327,9 +323,6 @@ button {
     }
     /*HUD adjusts for phone size*/
     .hud {
-        height: 115%;
-    }
-    #HUD {
         max-width: 57em;
         margin: 0 auto;
         font-size: 80%;

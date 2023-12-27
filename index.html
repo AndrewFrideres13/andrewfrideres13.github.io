@@ -147,49 +147,46 @@
         <!-- End rotator -->
     </div>
     <!-- Seperated out the awesome footer for readability -->
-    <footer id="HUD">
-        <!-- Our True Hud without the extra bits on the side -->
-        <div class="hud">
-            <div class="ammo box">
-                <div class="number">25</div>
-                <span>Ammo</span>
-            </div>
-            <div class="health box">
-                <div class="number">100%</div>
-                <span>Health</span>
-            </div>
-            <div class="arms box">
-                <div class="numberpad">
-                    <button>2</button><button>3</button><button>4</button><br/><button>5</button><button>6</button><button>7</button>
-                </div>
-                <span>Arms</span>
-            </div>
-            <div class="avatar box tooltip">
-                <div class="avatarTxt">Frideres</div>
-            </div>
-            <div class="armor box">
-                <div class="number">200%</div>
-                <span>Armor</span>
-            </div>
-            <!-- Links to LI, Github, Email-->
-            <div class="lives box">
-                <div class="outsideLinks">
-                    <a href="https://www.linkedin.com/in/andrew-frideres-231057107"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <div class="outsideLinks">
-                    <a href="https://github.com/AndrewFrideres13"><i class="fab fa-github-square"></i></a>
-                </div>
-                <div class="outsideLinks">
-                    <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><i class="fab fa-google"></i></a>
-                </div>
-            </div>
-            <div class="info box"><a>TopSkills:JS/C#/PY&nbsp;&nbsp;</a><a>Cloud:Azure/OCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a>Engines:Unity/Unreal</a><a>DB:PHP/MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+    <footer class="hud">
+        <div class="ammo box">
+            <div class="number">25</div>
+            <span>Ammo</span>
         </div>
+        <div class="health box">
+            <div class="number">100%</div>
+            <span>Health</span>
+        </div>
+        <div class="arms box">
+            <div class="numberpad">
+                <button>2</button><button>3</button><button>4</button><br/><button>5</button><button>6</button><button>7</button>
+            </div>
+            <span>Arms</span>
+        </div>
+        <div class="avatar box tooltip">
+            <div class="avatarTxt">Frideres</div>
+        </div>
+        <div class="armor box">
+            <div class="number">200%</div>
+            <span>Armor</span>
+        </div>
+        <!-- Links to LI, Github, Email-->
+        <div class="lives box">
+            <div class="outsideLinks">
+                <a href="https://www.linkedin.com/in/andrew-frideres-231057107"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="outsideLinks">
+                <a href="https://github.com/AndrewFrideres13"><i class="fab fa-github-square"></i></a>
+            </div>
+            <div class="outsideLinks">
+                <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+        <div class="info box"><a>TopSkills:JS/C#/PY&nbsp;&nbsp;</a><a>Cloud:Azure/OCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a>Engines:Unity/Unreal</a><a>DB:PHP/MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
         <!-- End of our container for the DOOM Hud -->
         <script>
             const ABOUT_BG = document.getElementsByClassName("abtBG")[0];
             const HTML_ELEM = document.getElementsByTagName("html")[0];
-            const HUD = document.getElementById("HUD");
+            const HUD = document.getElementsByClassName("hud")[0];
             const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             const START_BG = document.getElementsByClassName("startUpBG")[0];
             const VISITED_SITE_RECENTLY = document.cookie.split("doOnlyOnce=")[1]
