@@ -79,7 +79,7 @@ body div header {
 
 .nxtPrevButtons h2 {
     opacity: 0;
-    flex-grow: 1.35;
+    flex-grow: 0.35;
 }
 
 .prevBttn,
@@ -122,7 +122,7 @@ body div header {
         width: 90%;
         margin: 0.7rem auto 3.8rem auto;
         /* center with varying top and bottom margins */
-        min-height: 200px;
+        height: 100%;
     }
     .quoteRotator .quoteContent footer {
         clear: both;
@@ -135,6 +135,7 @@ body div header {
     .quoteRotator {
         font-size: 60%;
         width: 85%;
+        height: 100%;
     }
     .quoteRotator .quoteContent p {
         float: none;
@@ -152,8 +153,7 @@ body div header {
         padding: 0 0 0 0;
     }
     .nxtPrevButtons h2 {
-        font-size: 90%;
-        flex-grow: 0.35;
+        font-size: 5%;
     }
     .prevBttn,
     .nextBttn {
@@ -172,9 +172,6 @@ body div header {
 @media only screen and (min-width: 0em) and (max-width: 59em) and (orientation: landscape) {
     body div header {
         width: 80%;
-    }
-    .nxtPrevButtons h2 {
-        flex-grow: 0.85;
     }
 }
 

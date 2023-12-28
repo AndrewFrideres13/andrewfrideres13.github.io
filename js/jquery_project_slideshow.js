@@ -1,5 +1,5 @@
 ;
-(function($, window, undefined) { // Privatize the scope, pass in JQUERY ($) the window object (Which will be local) and explicitly state what undefined will be
+(function($, _window, _undefined) { // Privatize the scope, pass in JQUERY ($) the window object (Which will be local) and explicitly state what undefined will be
     $.abtRotator = {
         defaults: {
             rotateSpeed: null,
@@ -30,7 +30,7 @@
 
                 let rotate_quotes = function(direction = 'forward') {
                     rotationIsActive = false;
-                    var active_quote = $proj_container.find('.quoteContent.active');
+                    var active_quote = $proj_container.find('.active');
                     var next_quote = direction === 'forward' ? get_next_quote(active_quote) : get_previous_quote(active_quote);
 
                     active_quote.finish().animate({
@@ -41,7 +41,10 @@
                         next_quote.fadeIn(800);
                     });
 
-                    active_quote.removeClass('active'); // Remove current active class and set the new one to be active (Aka hide prev slide show next)
+                    // Treat this as a collection, as there is an uncommon case where we can have multiple "active" projects displayed at a single time.
+                    active_quote.each(function() {
+                        $(this).removeClass('active'); // Remove current active class and set the new one to be active (Aka hide prev slide show next)
+                    });
                     next_quote.addClass('active');
                     rotationIsActive = true;
                 }; // End rotate_quotes
