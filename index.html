@@ -209,8 +209,9 @@
             const ABOUT_BG = document.getElementById("abtBG");
 			const HTML_ELEM = document.getElementsByTagName("html")[0];
             const HUD = document.getElementsByClassName("hud")[0];
-            const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             const START_BG = document.getElementsByClassName("startUpBG")[0];
+			const AVATAR = document.getElementsByClassName("avatar")[0]; 
+            const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 			let visited_site_recently;
 			try {
@@ -243,9 +244,9 @@
 
             // Need to change this to on window changed, so it fires more often, fix width?
             function scaleAvatar() {
-                let avatar = document.getElementsByClassName("avatar")[0];
-                let posInfo = avatar.getBoundingClientRect();
-
+                if (!AVATAR) return; // Safety check
+    
+    			let posInfo = AVATAR.getBoundingClientRect(); // Use cached element
                 let storedX = posInfo.width - 40;
                 if (SCRN_W < 960) {
                     storedX = posInfo.width - 50;
@@ -255,7 +256,7 @@
                 let storedY = posInfo.height - 15;
                 // Adjust to ensure our HUD always matches up
                 HUD.style.width = `${window.innerWidth}px`;
-                avatar.style.backgroundSize = `${storedX}px ${storedY}px`;
+                AVATAR.style.backgroundSize = `${storedX}px ${storedY}px`;
             }
             scaleAvatar(); // Call immediately
 			window.addEventListener("resize", scaleAvatar); // Sets up the listener properly
