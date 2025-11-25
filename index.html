@@ -6,7 +6,7 @@
     <link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="CSS/styles.css"></noscript>
     <link rel="stylesheet" href="CSS/styles.css" />
-    <link rel="stylesheet" href="CSS/project_slideshow_styles.css" defer/>
+    <link rel="stylesheet" href="CSS/project_slideshow_styles.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Maintained by Andrew Frideres,
@@ -32,14 +32,16 @@
     </header>
     <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
     <header class="headerContainer">
-        <div class="nxtPrevButtons">
-            <button class="prevBttn"> Prev </button>
-            <h2>Fake Element</h2>
-            <button class="nextBttn"> Next </button>
+        <div class="nxtPrevButtons" aria-label="Project navigation">
+            <button class="prevBttn" aria-label="Previous project"> Prev </button>
+            <h2 class="visually-hidden">Project Navigation Controls</h2>
+            <button class="nextBttn" aria-label="Next project"> Next </button>
         </div>
     </header>
-    <main id="quoteRotator" class="quoteRotator">
-        <blockquote class="quoteContent active">
+    <main id="quoteRotator" class="quoteRotator" role="region" aria-label="Project portfolio shown by carousel">
+		<div class="sr-only" aria-live="polite" id="slideAnnouncer"></div>
+
+        <blockquote class="quoteContent active" aria-label="About Andrew Frideres">
             <p>
                 I love playing with all kinds of tech, from old to new. I have an old school mindset and this tend to translate into the work that I do. In my spare time I like to play a lot of old school games, pick up a new programming languages, or start a new project
                 and just plug away at that. Link to my resume
@@ -54,14 +56,14 @@
             <footer>-Andrew Frideres</footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="Multiplayer Pong Project">
             <p>
                 My role in the group was to combine, test, and ensure we had a deliverable to show off every week. I also had to be able to sit town with team members and have them talk about their additions so that we could log it, and assist in any debugging and merging
                 since that fell into my job role.This was my Capstone project at CVTC and my test for everything I had learned.
             </p>
             <video class="projectImg" muted preload="metadata" autoplay loop>
                     <script>
-                      if (localStorage.mobile = "mobile") {
+                      if (localStorage.mobile == "mobile") {
                         document.currentScript.parentNode.innerHTML += '<source src="./Pics/Mobile/mf_Pong.webm">'
                       } else {
                         document.currentScript.parentNode.innerHTML += '<source src="./Pics/Pong.webm">'
@@ -71,7 +73,7 @@
             <footer>Multiplayer Pong</footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="Early group AI pathing STEMM Project">
             <p>
                 Done as part of UW-Stout's 2020 STEMM expo as an experiment with Unity's AI, to see what could be achieved that would run sufficiently on low end hardware. The main goal was to achieve high volume groups, that would dynamically chase a target, while avoiding,
                 moving around, and adapting to the environment around them.
@@ -84,7 +86,7 @@
             <footer>Unity STEMM AI Experiment </footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="Random Game Selector Project">
             <p>
                 A program i made using Visual Studio (2015 initially, updated to 2017), it uses a GUI to allow the user to add, remove, and edit games connected to a mySQL Database and then upon execution does a sort of "spin" to run through all the games and select
                 one, complete with fun sound effects!
@@ -93,7 +95,7 @@
             <footer>Game Selector</footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="Space Shooter on IOS Project">
             <p>
                 A game I created using Swift 2.0, it's more or less a clone of the classic Asteroids game from way back in the day. It is developed to scale gracefully depending on the size of the phone, and has states for playing, power ups, and game over conditions.
             </p>
@@ -101,7 +103,7 @@
             <footer>Space Shooter</footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="2D Platformer on Unity Project">
             <p>
                 My first time using Unity, this is a 2D sidescroller game built for touchscreen Android devices, made with Haley Peterson (artist) at UW-Stout for my GDD 200 class 2019. In this game you play as a little ghost boy in their quest to restore color to the
                 bleak world, with a unique mechanic of using an Android devices built in gyroscope to control where the flashlight you use aims, using it to cut through the dark and expose the world of color below to solve puzzles & progress.
@@ -114,7 +116,7 @@
             <footer>Spotlight</footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="2D top down adventure game Project">
             <p>
                 Made at Stout in my GDD 325 class 2019, with Collin Diekvoss (Programmer), Lex Klusman (Artist), and Joshua Haakana (Artist) in Lackluster your goal is to activate all the orbs in order to restore the light to the world. The game was made using Phaser
                 3.0, and made use of an npm server on the back end, the ultimate goal was to make a fun, easy to play game for the Madison Children's Museum to put on as an interactive exhibit.
@@ -128,11 +130,11 @@
                 Lack Luster Download:
                 <a class="clickable" href="./games/LackLuster.7z">
                           Lack Luster
-                        </a>
+                </a>
             </footer>
         </blockquote>
 
-        <blockquote class="quoteContent">
+        <blockquote class="quoteContent" aria-label="3D Unity Adventure & Fishing Game FISKUR">
             <p>
                 Part of my 450 GDD Capstone Fall 2019-Spring 2020, a 3D action adventure game made in Unity, You play as a shipwrecked Viking who has crashed on an island within the arctic. Fitted with only your fishing rod, you set out to catch fish in order to survive
                 the ordeal. After wandering the island for a time, you discover an altar deep within the island dedicated to Njord, God of the Sea. Offering some of your bounty to Njord, he aids you by turning your rod into a weapon capable of surviving
@@ -151,42 +153,53 @@
     </main>
     <!-- Seperated out the awesome footer for readability -->
     <footer class="hud">
-        <div class="ammo box">
-            <div class="number">25</div>
-            <span>Ammo</span>
+        <div class="ammo box" role="img" aria-label="Decorative HUD element showing 25 ammo">
+            <div class="number" aria-hidden="true">25</div>
+            <span aria-hidden="true">Ammo</span>
         </div>
 
-        <div class="health box">
-            <div class="number">100%</div>
-            <span>Health</span>
+        <div class="health box" role="img" aria-label="Decorative HUD element showing 100% health">
+            <div class="number" aria-hidden="true">100%</div>
+            <span aria-hidden="true">Health</span>
         </div>
 
-        <div class="arms box">
-            <div class="numberpad">
+        <div class="arms box" aria-label="Decorative HUD element showing weapons boxes as pseudo buttons">
+            <div class="numberpad" aria-hidden="true">
                 <button>2</button><button>3</button><button>4</button><br/><button>5</button><button>6</button><button>7</button>
             </div>
-            <span>Arms</span>
+            <span aria-hidden="true">Arms</span>
         </div>
 
-        <div class="avatar box tooltip">
-            <div class="avatarTxt">Frideres</div>
+        <div class="avatar box tooltip" aria-label="Decorative HUD element showing me in DOOM pixel style!">
+            <div class="avatarTxt" aria-hidden="true">Frideres</div>
         </div>
 
-        <div class="armor box">
-            <div class="number">200%</div>
-            <span>Armor</span>
+        <div class="armor box" aria-label="Decorative HUD element showing 200% armor">
+            <div class="number" aria-hidden="true">200%</div>
+            <span aria-hidden="true">Armor</span>
         </div>
 
         <!-- Links to LI, Github, Email-->
-        <div class="lives box">
+        <div class="lives box" aria-label="External profile links">
             <div class="outsideLinks">
-                <a href="https://www.linkedin.com/in/andrew-frideres-231057107"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/andrew-frideres-231057107"
+				   aria-label="Visit Andrew's LinkedIn profile (opens in new tab)"
+           		   target="_blank" rel="noopener noreferrer">
+				   <i class="fab fa-linkedin" aria-hidden="true"></i>
+				</a>
             </div>
             <div class="outsideLinks">
-                <a href="https://github.com/AndrewFrideres13"><i class="fab fa-github-square"></i></a>
+                <a href="https://github.com/AndrewFrideres13"
+				   aria-label="Visit Andrew's GitHub profile (opens in new tab)"
+                   target="_blank" rel="noopener noreferrer">
+				   <i class="fab fa-github-square" aria-hidden="true"></i>
+				</a>
             </div>
             <div class="outsideLinks">
-                <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"><i class="fab fa-google"></i></a>
+                <a href="mailto:AndrewFrideres13@gmail.com?subject=Contact_Request"
+				   aria-label="Send email to Andrew Frideres">
+				   <i class="fab fa-google" aria-hidden="true"></i>
+				</a>
             </div>
         </div>
 
@@ -194,12 +207,20 @@
         <!-- End of our container for the DOOM Hud -->
         <script>
             const ABOUT_BG = document.getElementById("abtBG");
-            const HTML_ELEM = document.getElementsByTagName("html")[0];
+			const HTML_ELEM = document.getElementsByTagName("html")[0];
             const HUD = document.getElementsByClassName("hud")[0];
             const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             const START_BG = document.getElementsByClassName("startUpBG")[0];
-            const VISITED_SITE_RECENTLY = document.cookie.split("doOnlyOnce=")[1]
-            if (VISITED_SITE_RECENTLY !== "true") {
+
+			let visited_site_recently;
+			try {
+			    const COOKIEPARTS = document.cookie.split("doOnlyOnce=");
+			    visited_site_recently = COOKIEPARTS.length > 1 ? COOKIEPARTS[1].split(';')[0] : null;
+			} catch (error) {
+			    //  console.warn('Cookie parsing failed, showing intro animation');
+			    visited_site_recently = null;
+			}
+            if (visited_site_recently !== "true") {
                 document.cookie = "doOnlyOnce=true;";
             } else {
                 // Helps the browser remember to hide the cookie banner if we've already been here
@@ -217,8 +238,8 @@
                 event.stopPropagation();
             }
 
-            ABOUT_BG.style.width = "${SCRN_W}px";
-            START_BG.style.width = "${SCRN_W}px";
+            ABOUT_BG.style.width = `${SCRN_W}px`;
+            START_BG.style.width = `${SCRN_W}px`;
 
             // Need to change this to on window changed, so it fires more often, fix width?
             function scaleAvatar() {
@@ -233,10 +254,37 @@
 
                 let storedY = posInfo.height - 15;
                 // Adjust to ensure our HUD always matches up
-                HUD.style.width = "${window.innerWidth}px";
-                avatar.style.backgroundSize = "${storedX}px ${storedY}px";
+                HUD.style.width = `${window.innerWidth}px`;
+                avatar.style.backgroundSize = `${storedX}px ${storedY}px`;
             }
-            window.addEventListener("resize", scaleAvatar());
+            scaleAvatar(); // Call immediately
+			window.addEventListener("resize", scaleAvatar); // Sets up the listener properly
+
+			// Accessibility/niceity to allow arrow keys to control project carousel
+			document.addEventListener('keydown', function(e) {
+			    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+			        const prevBtn = document.querySelector('.prevBttn');
+			        const nextBtn = document.querySelector('.nextBttn');
+			        
+			        if (e.key === 'ArrowLeft' && prevBtn) {
+			            prevBtn.click();
+			            announceSlideChange();
+			        } else if (e.key === 'ArrowRight' && nextBtn) {
+			            nextBtn.click();
+			            announceSlideChange();
+			        }
+			    }
+			});
+
+			// Announce to Screen readers when we change elements 
+			function announceSlideChange() {
+			    const activeSlide = document.querySelector('.quoteContent.active');
+			    const announcer = document.getElementById('slideAnnouncer');
+			    if (activeSlide && announcer) {
+			        const slideTitle = activeSlide.querySelector('footer').textContent;
+			        announcer.textContent = `Now viewing: ${slideTitle}`; // This gets announced automatically
+			    }
+			}
 
             // Waits until the DOM is ready for manipulation $(function(){...}) is short for $(document).ready()
             $(function() {
@@ -245,7 +293,7 @@
                 let $about_bg = $(ABOUT_BG);
                 // Waits a bit then triggers fade out
                 // Waits a bit then triggers fade out
-                if (VISITED_SITE_RECENTLY === undefined) {
+                if (visited_site_recently === undefined) {
                     // Starting load visible, everything else invisible
                     $hud.css("opacity", 0);
                     $hud.delay(7500).fadeTo(5000, 1, function() {
