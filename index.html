@@ -213,20 +213,46 @@
 			const AVATAR = document.getElementsByClassName("avatar")[0]; 
             const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-			let visited_site_recently;
-			try {
-			    const COOKIEPARTS = document.cookie.split("doOnlyOnce=");
-			    visited_site_recently = COOKIEPARTS.length > 1 ? COOKIEPARTS[1].split(';')[0] : null;
-			} catch (error) {
-			    //  console.warn('Cookie parsing failed, showing intro animation');
-			    visited_site_recently = null;
+			// Logic for cookie/splash screen
+			function getCookieValue(name) {
+			    try {
+			        const cookies = document.cookie.split(';');
+			        for (let cookie of cookies) {
+			            const [cookieName, cookieValue] = cookie.trim().split('=');
+			            if (cookieName === name) {
+			                return cookieValue;
+			            }
+			        }
+			        return null; // Cookie not found
+			    } catch (error) {
+			        console.warn('Error reading cookie:', error);
+			        return null; // Fallback - treat as first visit
+			    }
 			}
-            if (visited_site_recently !== "true") {
-                document.cookie = "doOnlyOnce=true;";
-            } else {
-                // Helps the browser remember to hide the cookie banner if we've already been here
-                START_BG.style.display = "none";
-            }
+			function setCookie(name, value, days) {
+			    let expires = "";
+			    if (typeof days !== 'undefined') {
+			        const date = new Date();
+			        date.setTime(date.getTime() + (days*24*60*60*1000));
+			        expires = "; expires=" + date.toUTCString();
+			    }
+			    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+			}
+			const VISITED_SITE_RECENTLY = getCookieValue("doOnlyOnce");
+			const isFirstVisit = (VISITED_SITE_RECENTLY === null);
+			const isReturningVisitor = (VISITED_SITE_RECENTLY === "true");
+
+			if (isFirstVisit) {
+			    setCookie("doOnlyOnce", "true", 10);
+			    // Show splash screen...
+			} else if (isReturningVisitor) {
+			    // Skip splash screen...
+				START_BG.style.display = "none";
+			} else {
+			    // Unexpected cookie value - treat as first visit
+			    setCookie("doOnlyOnce", "true", 10);
+			    // Show splash screen...
+			}
 
             // Reset for reloading page after scrolling on longer posts
             window.scrollTo(0, 0);
