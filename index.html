@@ -21,7 +21,7 @@
 
 <body id="abtBG">
     <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
-    <header class="startUpBG">
+    <div class="startUpBG" role="dialog" aria-modal="true">
         <h1>AFrideres Portfolio</h1>
         <p>
             Screenshots on website from the game DOOM II by
@@ -29,17 +29,17 @@
             <br />I am <b>NOT</b> affiliated with ID Software, or own DOOM.
             <br />All credit goes to ID Software and their respective owners.
         </p>
-    </header>
-    <!-- Will act as our entire page, anything not in here will give the bg color of grey -->
-    <header class="headerContainer">
-        <div class="nxtPrevButtons" aria-label="Project navigation">
-            <button class="prevBttn" aria-label="Previous project"> Prev </button>
-            <h2 class="visually-hidden">Project Navigation Controls</h2>
-            <button class="nextBttn" aria-label="Next project"> Next </button>
-        </div>
-    </header>
+    </div>
+
     <main id="quoteRotator" class="quoteRotator" role="region" aria-label="Project portfolio shown by carousel">
 		<div class="sr-only" aria-live="polite" id="slideAnnouncer"></div>
+		<header class="headerContainer">
+	        <div class="nxtPrevButtons" aria-label="Project navigation">
+	            <button class="prevBttn" aria-label="Previous project"> Prev </button>
+	            <h2 class="visually-hidden">Project Navigation Controls</h2>
+	            <button class="nextBttn" aria-label="Next project"> Next </button>
+	        </div>
+	    </header>
 
         <blockquote class="quoteContent active" aria-label="About Andrew Frideres">
             <p>
@@ -211,6 +211,7 @@
             const HUD = document.getElementsByClassName("hud")[0];
             const START_BG = document.getElementsByClassName("startUpBG")[0];
 			const AVATAR = document.getElementsByClassName("avatar")[0]; 
+			const QUOTE_ROTATOR = document.getElementById("quoteRotator");
             const SCRN_W = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 			// Logic for cookie/splash screen
@@ -317,7 +318,7 @@
             $(function() {
                 let $hud = $(HUD);
                 let $start_bg = $(START_BG);
-                let $about_bg = $(ABOUT_BG);
+                let $quote_rotator = $(QUOTE_ROTATOR);
                 // Waits a bit then triggers fade out
                 // Waits a bit then triggers fade out
                 if (isReturningVisitor) {
@@ -325,11 +326,11 @@
                     $hud.show();
                     //Starting load invisible, everything else visible
                     $start_bg.css("opacity", 0);
-                    $about_bg.css("opacity", 0.7);
+                    $quote_rotator.css("opacity", 0.7);
 
                     $start_bg.hide();
                     HTML_ELEM.style.overflow = "visible";
-                    $about_bg.show();
+                    $quote_rotator.show();
                     //Allow touch screen/scroll events again
                     window.removeEventListener("scroll", preventMotion, false);
                     window.removeEventListener("touchmove", preventMotion, false);
@@ -341,14 +342,14 @@
                     });
 
                     $start_bg.css("opacity", 0.7);
-                    $about_bg.css("opacity", 0);
+                    $quote_rotator.css("opacity", 0);
                     $start_bg.delay(7000).fadeTo(5000, 0, function() {
                         $start_bg.hide();
                         HTML_ELEM.style.overflow = "visible";
                     });
 
-                    $about_bg.delay(6500).fadeTo(5000, 1, function() {
-                        $about_bg.show();
+                    $quote_rotator.delay(6500).fadeTo(5000, 1, function() {
+                        $quote_rotator.show();
                         //Allow touch screen/scroll events again
                         window.removeEventListener("scroll", preventMotion, false);
                         window.removeEventListener("touchmove", preventMotion, false);
