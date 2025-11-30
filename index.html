@@ -288,6 +288,11 @@
             scaleAvatar(); // Call immediately
 			window.addEventListener("resize", scaleAvatar); // Sets up the listener properly
 
+			// Helper to highlight a button briefly
+			function highlightButton(btn) {
+			    btn.classList.add('selected_highlight');
+			    setTimeout(() => btn.classList.remove('selected_highlight'), 300);
+			}
 			// Accessibility/niceity to allow arrow keys to control project carousel
 			document.addEventListener('keydown', function(e) {
 			    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
@@ -296,9 +301,11 @@
 			        
 			        if (e.key === 'ArrowLeft' && prevBtn) {
 			            prevBtn.click();
+						highlightButton(prevBtn);
 			            announceSlideChange();
 			        } else if (e.key === 'ArrowRight' && nextBtn) {
 			            nextBtn.click();
+						highlightButton(nextBtn);
 			            announceSlideChange();
 			        }
 			    }
