@@ -188,8 +188,15 @@ body {
 }
 
 
-/* Hover Checks (Desktop/Mouse pointer only, touchscreen won't see or be affected by such) */
+/* Define a hover/highlighting class to add/remove to elements to simulate a click */
+.selected_highlight {
+        transition: color 0.3s;
+        color: #bd0102;
+        text-shadow: -2px -2px 0 #3d0002, 2px -2px 0 #3d0002, -2px 2px 0 #3d0002, 2px 2px 0 #3d0002, 0.1em 0.05em 0 rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+}
 
+/* Hover Checks (Desktop/Mouse pointer only, touchscreen won't see or be affected by such) */
 @media (hover: hover) and (pointer: fine) {
     .arms button:hover,
     .outsideLinks:hover {
